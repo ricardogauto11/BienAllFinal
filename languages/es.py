@@ -122,6 +122,7 @@
 'Deploy on Google App Engine': 'Despliegue en Google App Engine',
 'Deployment Recipes': 'Recetas de despliegue',
 'Descripcion': 'Descripcion',
+'Descripción:': 'Descripción:',
 'Description': 'Descripción',
 'design': 'diseño',
 'DESIGN': 'DISEÑO',

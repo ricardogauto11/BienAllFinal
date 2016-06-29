@@ -135,14 +135,14 @@ db.define_table('image',
         request.folder, 'static', 'images', 'gallery'),
                 label= T('')),
     Field('title',
-        label=T('Descripcion')))
+        label=T('Descripción:')))
 
 db.define_table('comment',
     Field ('image_id',db.image),
     Field ('author'),
     Field('body','text'))
 
-db.image.title.requires = [IS_NOT_IN_DB(db,db.image.title), IS_NOT_EMPTY (error_message = T('Debe escribir un titulo de la imagen'))]
+db.image.title.requires = [IS_NOT_IN_DB(db,db.image.title), IS_NOT_EMPTY (error_message = T('Debe escribir un título de la imagen'))]
 db.image.archivo.requires = [IS_NOT_EMPTY (error_message = T('No ha cargado ninguna imagen!')), IS_IMAGE (error_message = T('El archivo cargado no es una imagen.'))]
 db.comment.image_id.requires = IS_IN_DB(db,db.image.id,'%(title)s')
 db.comment.author.requires = IS_NOT_EMPTY(error_message = T('Ingrese su nombre, por favor.'))
