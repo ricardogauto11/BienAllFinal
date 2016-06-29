@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mostrar Foto</title>
+</head>
+<body>
+	<img src="{{=URL('download', args = image.archivo)}}">
+</body>
+</html>

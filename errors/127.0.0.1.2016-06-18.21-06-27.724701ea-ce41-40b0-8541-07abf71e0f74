@@ -1,0 +1,801 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> name 'verGaleria' is not defined"
+p3
+sS'layer'
+p4
+S'D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\views\\galleryController/index.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\n<html lang="en">\\n\\n<head>\\n\\n    <meta charset="utf-8">\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\\n    <meta name="viewport" content="width=device-width, initial-scale=1">\\n    <meta name="description" content="">\\n    <meta name="author" content="">\\n\\n    <title>3 Col Portfolio - Start Bootstrap Template</title>\\n\\n    <!-- Bootstrap Core CSS -->\\n    <link href="/galleryController/css/bootstrap.min.css" rel="stylesheet">\\n\\n    <!-- Custom CSS -->\\n    <link href="/galleryController/css/3-col-portfolio.css" rel="stylesheet">\\n\\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\\n    <!-- WARNING: Respond.js doesn\\\'t work if you view the page via file:// -->\\n    <!--[if lt IE 9]>\\n        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>\\n        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>\\n    <![endif]-->\\n\\n</head>\\n\\n<body>\\n\\n    <!-- Navigation -->\\n    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">\\n        <div class="container">\\n            <!-- Brand and toggle get grouped for better mobile display -->\\n            <div class="navbar-header">\\n                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">\\n                    <span class="sr-only">Toggle navigation</span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                </button>\\n                <a class="navbar-brand" href="#">Start Bootstrap</a>\\n            </div>\\n            <!-- Collect the nav links, forms, and other content for toggling -->\\n            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\\n                <ul class="nav navbar-nav">\\n                    <li>\\n                        <a href="#">About</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">Services</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">Contact</a>\\n                    </li>\\n                </ul>\\n            </div>\\n            <!-- /.navbar-collapse -->\\n        </div>\\n        <!-- /.container -->\\n    </nav>\\n\\n    <!-- Page Content -->\\n    <div class="container">\\n\\n        <!-- Page Header -->\\n        <div class="row">\\n            <div class="col-lg-12">\\n                <h1 class="page-header">Page Heading\\n                    <small>Secondary Text</small>\\n                </h1>\\n            </div>\\n        </div>\\n        <!-- /.row -->\\n\\n        <!-- Projects Row -->\\n        \', escape=False)\nfor image in verGaleria:\n    response.write(\'\\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)\n    response.write(URL(\'galleryController\', \'download\', args = image.archivo))\n    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <!--\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)\n    response.write(URL(\'galleryController\', \'download\', args = image.archivo))\n    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)\n    response.write(URL(\'galleryController\', \'download\', args = image.archivo))\n    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n                -->\\n            </div>\\n        </div>\\n        \', escape=False)\n    pass\nresponse.write(\'\\n        <!-- /.row -->\\n\\n        <!-- Projects Row \\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n        </div>\\n        -->\\n\\n        <!-- Projects Row \\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n        </div>\\n        -->\\n        <!-- /.row -->\\n\\n        <hr>\\n\\n        <!-- Pagination -->\\n        <div class="row text-center">\\n            <div class="col-lg-12">\\n                <ul class="pagination">\\n                    <li>\\n                        <a href="#">&laquo;</a>\\n                    </li>\\n                    <li class="active">\\n                        <a href="#">1</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">2</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">3</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">4</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">5</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">&raquo;</a>\\n                    </li>\\n                </ul>\\n            </div>\\n        </div>\\n        <!-- /.row -->\\n\\n        <hr>\\n\\n        <!-- Footer -->\\n        <footer>\\n            <div class="row">\\n                <div class="col-lg-12">\\n                    <p>Copyright &copy; Your Website 2014</p>\\n                </div>\\n            </div>\\n            <!-- /.row -->\\n        </footer>\\n\\n    </div>\\n    <!-- /.container -->\\n\\n    <!-- jQuery -->\\n    <script src="js/jquery.js"></script>\\n\\n    <!-- Bootstrap Core JavaScript -->\\n    <script src="js/bootstrap.min.js"></script>\\n\\n</body>\\n\\n</html>\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.NameError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.NameError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.NameError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.NameError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.NameError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.NameError object>'
+p23
+sS'__reduce__'
+p24
+S'<built-in method __reduce__ of exceptions.NameError object>'
+p25
+sS'__str__'
+p26
+S"<method-wrapper '__str__' of exceptions.NameError object>"
+p27
+sS'__format__'
+p28
+S'<built-in method __format__ of exceptions.NameError object>'
+p29
+sS'__getattribute__'
+p30
+S"<method-wrapper '__getattribute__' of exceptions.NameError object>"
+p31
+sS'__class__'
+p32
+S"<type 'exceptions.NameError'>"
+p33
+sS'__unicode__'
+p34
+S'<built-in method __unicode__ of exceptions.NameError object>'
+p35
+sS'__delattr__'
+p36
+S"<method-wrapper '__delattr__' of exceptions.NameError object>"
+p37
+sS'__subclasshook__'
+p38
+S'<built-in method __subclasshook__ of type object>'
+p39
+sS'__repr__'
+p40
+S"<method-wrapper '__repr__' of exceptions.NameError object>"
+p41
+sS'args'
+p42
+S'("name \'verGaleria\' is not defined",)'
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.NameError object>'
+p47
+sS'__doc__'
+p48
+S"'Name not found globally.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.NameError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S"name 'verGaleria' is not defined"
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's4c\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>BienAll</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>galleryController</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-a4cec2d9-471b-47fd-af28-34d430384cec<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_bienall</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_pruebaimage</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-551c4e2e-8a6b-46a2-bf1e-a7402f0327c2<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-2349ee1c-5c8d-41b4-9fa4-2780d1cd2a8d<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-2349ee1c-5c8d-41b4-9fa4-2780d1cd2a8d; session_id_pruebaimage=127.0.0.1-551c4e2e-8a6b-46a2-bf1e-a7402f0327c2; session_id_admin=127.0.0.1-a4cec2d9-471b-47fd-af28-34d430384cec; session_id_bienall=127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/BienAll/galleryController</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>52107</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>ProBook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\pruebaImage\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\BienAll\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\w2pySocialAuth\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\welcome\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x2d95fd0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ProBook&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-2349ee1c-5c8d-41b4-9fa4-2780d1cd2a8d; session_id_pruebaimage=127.0.0.1-551c4e2e-8a6b-46a2-bf1e-a7402f0327c2; session_id_admin=127.0.0.1-a4cec2d9-471b-47fd-af28-34d430384cec; session_id_bienall=127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>ProBook</div></td></tr><tr><td><div>fe80::2cdd:3f91:4148:908c%21</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>2001:0:9d38:6ab8:2cdd:3f91:4148:908c</div></td></tr><tr><td><div>fe80::31bd:ccf3:1cb2:febc%16</div></td></tr><tr><td><div>192.168.0.102</div></td></tr><tr><td><div>169.254.96.92</div></td></tr><tr><td><div>fe80::4993:c2c9:ce5f:605c%17</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/BienAll/galleryController</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>52107</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/BienAll/galleryController</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>ProBook</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x0214D0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x025413B0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x07E7F3B0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x0214D0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x025413B0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x07E7F3B0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\pruebaImage\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\BienAll\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\w2pySocialAuth\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\welcome\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x2d95fd0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ProBook&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>ProBook</div></td></tr><tr><td><div>fe80::2cdd:3f91:4148:908c%21</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>2001:0:9d38:6ab8:2cdd:3f91:4148:908c</div></td></tr><tr><td><div>fe80::31bd:ccf3:1cb2:febc%16</div></td></tr><tr><td><div>192.168.0.102</div></td></tr><tr><td><div>169.254.96.92</div></td></tr><tr><td><div>fe80::4993:c2c9:ce5f:605c%17</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2016, 6, 18, 21, 6, 27, 597000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/BienAll/galleryController</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2016, 6, 19, 0, 6, 27, 597000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x085FA490&gt;</div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'D:\\Informatorio 2016\\ET-1\\web2py\\gluon\\restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 07E7C140, file "D:\\Info...nAll\\views\\galleryController/index.html", line 1>'
+p69
+ssS'lnum'
+p70
+I227
+sS'lines'
+p71
+(dp72
+I224
+S'            ccode = code'
+p73
+sI225
+S'        else:'
+p74
+sI226
+S'            ccode = compile2(code, layer)'
+p75
+sI227
+S'        exec ccode in environment'
+p76
+sI228
+S'    except HTTP:'
+p77
+sI229
+S'        raise'
+p78
+sI230
+S'    except RestrictedError:'
+p79
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p80
+sI222
+S'    try:'
+p81
+sI223
+S'        if isinstance(code, types.CodeType):'
+p82
+ssS'call'
+p83
+S'(code=\'response.write(\\\'<!DOCTYPE html>\\\\n<html lang="en"...</script>\\\\n\\\\n</body>\\\\n\\\\n</html>\\\\n\\\', escape=False)\', environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=r\'D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\views\\galleryController/index.html\')'
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\views\\galleryController\\index.html'
+p88
+sg64
+(dp89
+S'lang'
+p90
+S'undefined'
+p91
+sS'html'
+p92
+g91
+ssg70
+I2
+sg71
+(dp93
+I1
+S'response.write(\'<!DOCTYPE html>\\n<html lang="en">\\n\\n<head>\\n\\n    <meta charset="utf-8">\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\\n    <meta name="viewport" content="width=device-width, initial-scale=1">\\n    <meta name="description" content="">\\n    <meta name="author" content="">\\n\\n    <title>3 Col Portfolio - Start Bootstrap Template</title>\\n\\n    <!-- Bootstrap Core CSS -->\\n    <link href="/galleryController/css/bootstrap.min.css" rel="stylesheet">\\n\\n    <!-- Custom CSS -->\\n    <link href="/galleryController/css/3-col-portfolio.css" rel="stylesheet">\\n\\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\\n    <!-- WARNING: Respond.js doesn\\\'t work if you view the page via file:// -->\\n    <!--[if lt IE 9]>\\n        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>\\n        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>\\n    <![endif]-->\\n\\n</head>\\n\\n<body>\\n\\n    <!-- Navigation -->\\n    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">\\n        <div class="container">\\n            <!-- Brand and toggle get grouped for better mobile display -->\\n            <div class="navbar-header">\\n                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">\\n                    <span class="sr-only">Toggle navigation</span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                </button>\\n                <a class="navbar-brand" href="#">Start Bootstrap</a>\\n            </div>\\n            <!-- Collect the nav links, forms, and other content for toggling -->\\n            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\\n                <ul class="nav navbar-nav">\\n                    <li>\\n                        <a href="#">About</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">Services</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">Contact</a>\\n                    </li>\\n                </ul>\\n            </div>\\n            <!-- /.navbar-collapse -->\\n        </div>\\n        <!-- /.container -->\\n    </nav>\\n\\n    <!-- Page Content -->\\n    <div class="container">\\n\\n        <!-- Page Header -->\\n        <div class="row">\\n            <div class="col-lg-12">\\n                <h1 class="page-header">Page Heading\\n                    <small>Secondary Text</small>\\n                </h1>\\n            </div>\\n        </div>\\n        <!-- /.row -->\\n\\n        <!-- Projects Row -->\\n        \', escape=False)'
+p94
+sI2
+S'for image in verGaleria:'
+p95
+sI3
+S'    response.write(\'\\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)'
+p96
+sI4
+S"    response.write(URL('galleryController', 'download', args = image.archivo))"
+p97
+sI5
+S'    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <!--\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)'
+p98
+sI6
+S"    response.write(URL('galleryController', 'download', args = image.archivo))"
+p99
+sI7
+S'    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="\', escape=False)'
+p100
+sI8
+S"    response.write(URL('galleryController', 'download', args = image.archivo))"
+p101
+sI9
+S'    response.write(\'" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n                -->\\n            </div>\\n        </div>\\n        \', escape=False)'
+p102
+sI10
+S'    pass'
+p103
+sI11
+S'response.write(\'\\n        <!-- /.row -->\\n\\n        <!-- Projects Row \\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n        </div>\\n        -->\\n\\n        <!-- Projects Row \\n        <div class="row">\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n            <div class="col-md-4 portfolio-item">\\n                <a href="#">\\n                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">\\n                </a>\\n                <h3>\\n                    <a href="#">Project Name</a>\\n                </h3>\\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>\\n            </div>\\n        </div>\\n        -->\\n        <!-- /.row -->\\n\\n        <hr>\\n\\n        <!-- Pagination -->\\n        <div class="row text-center">\\n            <div class="col-lg-12">\\n                <ul class="pagination">\\n                    <li>\\n                        <a href="#">&laquo;</a>\\n                    </li>\\n                    <li class="active">\\n                        <a href="#">1</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">2</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">3</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">4</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">5</a>\\n                    </li>\\n                    <li>\\n                        <a href="#">&raquo;</a>\\n                    </li>\\n                </ul>\\n            </div>\\n        </div>\\n        <!-- /.row -->\\n\\n        <hr>\\n\\n        <!-- Footer -->\\n        <footer>\\n            <div class="row">\\n                <div class="col-lg-12">\\n                    <p>Copyright &copy; Your Website 2014</p>\\n                </div>\\n            </div>\\n            <!-- /.row -->\\n        </footer>\\n\\n    </div>\\n    <!-- /.container -->\\n\\n    <!-- jQuery -->\\n    <script src="js/jquery.js"></script>\\n\\n    <!-- Bootstrap Core JavaScript -->\\n    <script src="js/bootstrap.min.js"></script>\\n\\n</body>\\n\\n</html>\\n\', escape=False)'
+p104
+ssg83
+S'()'
+p105
+sg85
+S'<module>'
+p106
+sasS'pyver'
+p107
+S'Python 2.7.9: D:\\Informatorio 2016\\ET-1\\web2py\\web2py.exe (prefix: C:\\Python27)'
+p108
+sS'session'
+p109
+g57
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp110
+sS'etype'
+p111
+S"<type 'exceptions.NameError'>"
+p112
+sS'date'
+p113
+S'Sat Jun 18 21:06:27 2016'
+p114
+sS'response'
+p115
+g57
+(S's=/\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x085FA2E0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_bienall</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Inicio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/BienAll/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Mis Sitios</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Esta Aplicaci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/BienAll</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Controlador</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/controllers/galleryController.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Vista</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/views/galleryController/index.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo BDD</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo "menu"</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Dise\xc3\xb1o de p\xc3\xa1gina</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Hoja de estilo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/BienAll/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Base de datos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/BienAll/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errores</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/BienAll</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Acerca de</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/BienAll</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Descargas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Soporte</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demostraci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ejemplos R\xc3\xa1pidos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>V\xc3\xaddeos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Aplicaciones Libres</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recetas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Galeria</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/BienAll/galleryController/index</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^galleryController/\\w+\\.py$</div></td></tr><tr><td><div>^galleryController/index/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_bienall</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;D:\\\\Informatorio 2016\\\\ET-1\\\\web2py\\\\applications\\\\BienAll\\\\sessions\\\\122\\\\1f5\\\\127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f&#x27;, mode &#x27;rb+&#x27; at 0x07F1ABD0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\sessions\\127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>5bf7acabf8b9dfebde23085b956688b0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-255a701e-3444-4020-b8cf-f6fcf8c48f9f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_bienall</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>BienAll</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Bienall</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>galleryController/index.html</div></td></tr></table></div>'
+tRp116
+sS'locals'
+p117
+(dp118
+S'Service'
+p119
+S"<class 'gluon.tools.Service'>"
+p120
+sS'OBJECT'
+p121
+S"<class 'gluon.html.OBJECT'>"
+p122
+sS'SQLDB'
+p123
+S"<class 'pydal.base.DAL'>"
+p124
+sg109
+S"<Storage {'_formkey[image/create]': ['bbebe3a2-b...056f3', 'f9e05bbe-9edd-4829-a431-22ceb55fa3cf']}>"
+p125
+sS'LINK'
+p126
+S"<class 'gluon.html.LINK'>"
+p127
+sS'BR'
+p128
+S"<class 'gluon.html.BR'>"
+p129
+sS'local_import'
+p130
+S'<function <lambda>>'
+p131
+sS'OPTGROUP'
+p132
+S"<class 'gluon.html.OPTGROUP'>"
+p133
+sS'__package__'
+p134
+S'None'
+p135
+sS'PRE'
+p136
+S"<class 'gluon.html.PRE'>"
+p137
+sS'IS_INT_IN_RANGE'
+p138
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p139
+sS'IS_LOWER'
+p140
+S"<class 'gluon.validators.IS_LOWER'>"
+p141
+sS'IS_STRONG'
+p142
+S"<class 'gluon.validators.IS_STRONG'>"
+p143
+sS'cache'
+p144
+S'<gluon.cache.Cache object>'
+p145
+sS'IS_IN_DB'
+p146
+S"<class 'gluon.validators.IS_IN_DB'>"
+p147
+sS'TAG'
+p148
+S'<gluon.html.__TAG__ object>'
+p149
+sS'SQLField'
+p150
+S"<class 'pydal.objects.Field'>"
+p151
+sS'mail'
+p152
+S'<gluon.tools.Mail object>'
+p153
+sS'BODY'
+p154
+S"<class 'gluon.html.BODY'>"
+p155
+sS'IS_DATE_IN_RANGE'
+p156
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p157
+sS'IFRAME'
+p158
+S"<class 'gluon.html.IFRAME'>"
+p159
+sS'URL'
+p160
+S'<function URL>'
+p161
+sS'__file__'
+p162
+S"r'D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\views\\galleryController/index.html'"
+p163
+sS'db'
+p164
+S'<DAL uri="sqlite://storage.sqlite">'
+p165
+sS'auth'
+p166
+S'<gluon.tools.Auth object>'
+p167
+sS'P'
+S"<class 'gluon.html.P'>"
+p168
+sS'TFOOT'
+p169
+S"<class 'gluon.html.TFOOT'>"
+p170
+sS'XHTML'
+p171
+S"<class 'gluon.html.XHTML'>"
+p172
+sS'ON'
+p173
+S'True'
+p174
+sS'OL'
+p175
+S"<class 'gluon.html.OL'>"
+p176
+sS'TEXTAREA'
+p177
+S"<class 'gluon.html.TEXTAREA'>"
+p178
+sS'MENU'
+p179
+S"<class 'gluon.html.MENU'>"
+p180
+sS'IS_IMAGE'
+p181
+S"<class 'gluon.validators.IS_IMAGE'>"
+p182
+sS'path'
+p183
+S"<module 'ntpath' from 'D:\\Informatorio 2016\\ET-1\\web2py\\library.zip\\ntpath.pyc'>"
+p184
+sS'EM'
+p185
+S"<class 'gluon.html.EM'>"
+p186
+sS'CODE'
+p187
+S"<class 'gluon.html.CODE'>"
+p188
+sS'HTTP'
+p189
+S"<class 'gluon.http.HTTP'>"
+p190
+sS'HR'
+p191
+S"<class 'gluon.html.HR'>"
+p192
+sS'IS_DATETIME'
+p193
+S"<class 'gluon.validators.IS_DATETIME'>"
+p194
+sS'STYLE'
+p195
+S"<class 'gluon.html.STYLE'>"
+p196
+sS'LABEL'
+p197
+S"<class 'gluon.html.LABEL'>"
+p198
+sS'CLEANUP'
+p199
+S"<class 'gluon.validators.CLEANUP'>"
+p200
+sS'plugins'
+p201
+S'<gluon.tools.PluginManager object>'
+p202
+sS'SELECT'
+p203
+S"<class 'gluon.html.SELECT'>"
+p204
+sS'index'
+p205
+S'<Rows (2)>'
+p206
+sS'CENTER'
+p207
+S"<class 'gluon.html.CENTER'>"
+p208
+sS'Crud'
+p209
+S"<class 'gluon.tools.Crud'>"
+p210
+sS'Auth'
+p211
+S"<class 'gluon.tools.Auth'>"
+p212
+sS'DEVELOPMENT_MENU'
+p213
+g174
+sS'__builtins__'
+p214
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p215
+sS'HTML'
+p216
+S"<class 'gluon.html.HTML'>"
+p217
+sS'SQLFORM'
+p218
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p219
+sS'LOAD'
+p220
+S'<function LOAD>'
+p221
+sS'redirect'
+p222
+S'<function redirect>'
+p223
+sS'FIELDSET'
+p224
+S"<class 'gluon.html.FIELDSET'>"
+p225
+sS'IS_EQUAL_TO'
+p226
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p227
+sS'embed64'
+p228
+S'<function embed64>'
+p229
+sS'IS_LIST_OF'
+p230
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p231
+sS'INPUT'
+p232
+S"<class 'gluon.html.INPUT'>"
+p233
+sS'EMBED'
+p234
+S"<class 'gluon.html.EMBED'>"
+p235
+sS'_'
+S'<function _>'
+p236
+sS'myconf'
+p237
+S"{'forms': {'formstyle': 'bootstrap3_inline', 'se...': {'names': 'localhost:*, 127.0.0.1:*, *:*, *'}}"
+p238
+sS'H2'
+p239
+S"<class 'gluon.html.H2'>"
+p240
+sS'H3'
+p241
+S"<class 'gluon.html.H3'>"
+p242
+sS'AppConfig'
+p243
+S'<function AppConfig>'
+p244
+sS'H1'
+p245
+S"<class 'gluon.html.H1'>"
+p246
+sS'H6'
+p247
+S"<class 'gluon.html.H6'>"
+p248
+sS'H4'
+p249
+S"<class 'gluon.html.H4'>"
+p250
+sS'H5'
+p251
+S"<class 'gluon.html.H5'>"
+p252
+sS'UL'
+p253
+S"<class 'gluon.html.UL'>"
+p254
+sS'IS_UPPER'
+p255
+S"<class 'gluon.validators.IS_UPPER'>"
+p256
+sS'xmlescape'
+p257
+S'<function xmlescape>'
+p258
+sS'IS_TIME'
+p259
+S"<class 'gluon.validators.IS_TIME'>"
+p260
+sS'OPTION'
+p261
+S"<class 'gluon.html.OPTION'>"
+p262
+sS'TITLE'
+p263
+S"<class 'gluon.html.TITLE'>"
+p264
+sS'CRYPT'
+p265
+S"<class 'gluon.validators.CRYPT'>"
+p266
+sS'IS_EMPTY_OR'
+p267
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p268
+sS'MARKMIN'
+p269
+S"<class 'gluon.html.MARKMIN'>"
+p270
+sS'__name__'
+p271
+S"'__restricted__'"
+p272
+sS'STRONG'
+p273
+S"<class 'gluon.html.STRONG'>"
+p274
+sS'COL'
+p275
+S"<class 'gluon.html.COL'>"
+p276
+sS'service'
+p277
+S'<gluon.tools.Service object>'
+p278
+sS'SCRIPT'
+p279
+S"<class 'gluon.html.SCRIPT'>"
+p280
+sS'TABLE'
+p281
+S"<class 'gluon.html.TABLE'>"
+p282
+sS'IS_IPV4'
+p283
+S"<class 'gluon.validators.IS_IPV4'>"
+p284
+sS'IS_LENGTH'
+p285
+S"<class 'gluon.validators.IS_LENGTH'>"
+p286
+sS'IS_IPV6'
+p287
+S"<class 'gluon.validators.IS_IPV6'>"
+p288
+sS'XML'
+p289
+S"<class 'gluon.html.XML'>"
+p290
+sS'B'
+S"<class 'gluon.html.B'>"
+p291
+sS'IMG'
+p292
+S"<class 'gluon.html.IMG'>"
+p293
+sS'SQLTABLE'
+p294
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p295
+sS'IS_MATCH'
+p296
+S"<class 'gluon.validators.IS_MATCH'>"
+p297
+sS'IS_ALPHANUMERIC'
+p298
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p299
+sS'SPAN'
+p300
+S"<class 'gluon.html.SPAN'>"
+p301
+sS'IS_JSON'
+p302
+S"<class 'gluon.validators.IS_JSON'>"
+p303
+sS'IS_IPADDRESS'
+p304
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p305
+sS'IS_SLUG'
+p306
+S"<class 'gluon.validators.IS_SLUG'>"
+p307
+sS'BEAUTIFY'
+p308
+S"<class 'gluon.html.BEAUTIFY'>"
+p309
+sS'META'
+p310
+S"<class 'gluon.html.META'>"
+p311
+sS'BUTTON'
+p312
+S"<class 'gluon.html.BUTTON'>"
+p313
+sS'IS_DATE'
+p314
+S"<class 'gluon.validators.IS_DATE'>"
+p315
+sS'IS_EMAIL'
+p316
+S"<class 'gluon.validators.IS_EMAIL'>"
+p317
+sS'IS_NOT_EMPTY'
+p318
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p319
+sS'IS_FLOAT_IN_RANGE'
+p320
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p321
+sS'TBODY'
+p322
+S"<class 'gluon.html.TBODY'>"
+p323
+sS'CAT'
+p324
+S"<class 'gluon.html.CAT'>"
+p325
+sS'Field'
+p326
+S"<class 'pydal.objects.Field'>"
+p327
+sS'IS_LIST_OF_EMAILS'
+p328
+S"<class 'gluon.validators.IS_LIST_OF_EMAILS'>"
+p329
+sS'DIV'
+p330
+S"<class 'gluon.html.DIV'>"
+p331
+sS'LEGEND'
+p332
+S"<class 'gluon.html.LEGEND'>"
+p333
+sS'COLGROUP'
+p334
+S"<class 'gluon.html.COLGROUP'>"
+p335
+sS'DAL'
+p336
+S"<class 'pydal.base.DAL'>"
+p337
+sS'ASSIGNJS'
+p338
+S'<function ASSIGNJS>'
+p339
+sS'TR'
+p340
+S"<class 'gluon.html.TR'>"
+p341
+sS'LI'
+p342
+S"<class 'gluon.html.LI'>"
+p343
+sS'TH'
+p344
+S"<class 'gluon.html.TH'>"
+p345
+sS'TD'
+p346
+S"<class 'gluon.html.TD'>"
+p347
+sS'PluginManager'
+p348
+S"<class 'gluon.tools.PluginManager'>"
+p349
+sS'IS_URL'
+p350
+S"<class 'gluon.validators.IS_URL'>"
+p351
+sS'A'
+S"<class 'gluon.html.A'>"
+p352
+sS'HEAD'
+p353
+S"<class 'gluon.html.HEAD'>"
+p354
+sS'IS_DATETIME_IN_RANGE'
+p355
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p356
+sS'FORM'
+p357
+S"<class 'gluon.html.FORM'>"
+p358
+sS'I'
+S"<class 'gluon.html.I'>"
+p359
+sS'crud'
+p360
+S'<gluon.tools.Crud object>'
+p361
+sS'IS_NOT_IN_DB'
+p362
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p363
+sg115
+S"<Storage {'body': <cStringIO.StringO object at 0...E7F5F0>, 'view': 'galleryController/index.html'}>"
+p364
+sS'THEAD'
+p365
+S"<class 'gluon.html.THEAD'>"
+p366
+sS'ANY_OF'
+p367
+S"<class 'gluon.validators.ANY_OF'>"
+p368
+sS'IS_NULL_OR'
+p369
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p370
+sg56
+S"<Storage {'_vars': None, 'function': 'index', 'c...io 2016\\\\ET-1\\\\web2py\\\\applications\\\\BienAll\\\\'}>"
+p371
+sS'IS_EXPR'
+p372
+S"<class 'gluon.validators.IS_EXPR'>"
+p373
+sS'T'
+S'<gluon.languages.translator object>'
+p374
+sS'IS_IN_SET'
+p375
+S"<class 'gluon.validators.IS_IN_SET'>"
+p376
+sS'IS_UPLOAD_FILENAME'
+p377
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p378
+sS'TT'
+p379
+S"<class 'gluon.html.TT'>"
+p380
+sS'IS_DECIMAL_IN_RANGE'
+p381
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p382
+sssS'traceback'
+p383
+S'Traceback (most recent call last):\n  File "D:\\Informatorio 2016\\ET-1\\web2py\\gluon\\restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "D:\\Informatorio 2016\\ET-1\\web2py\\applications\\BienAll\\views\\galleryController/index.html", line 2, in <module>\n    <html lang="en">\nNameError: name \'verGaleria\' is not defined\n'
+p384
+s.

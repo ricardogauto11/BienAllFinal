@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!-- www.phpied.com/conditional-comments-block-downloads/ -->
+    <!-- Always force latest IE rendering engine
+         (even in intranet) & Chrome Frame
+         Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
+    <!--  Mobile Viewport Fix
+          j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
+          device-width: Occupy full width of the screen in its current orientation
+          initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+          user-scalable = yes allows the user to zoom in -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{=response.title or request.application}}</title>
+    <!-- http://dev.w3.org/html5/markup/meta.name.html -->
+    <meta name="application-name" content="{{=request.application}}">
+    <!-- Speaking of Google, don't forget to set your site up:
+         http://google.com/webmasters -->
+    <meta name="google-site-verification" content="">
+    <!-- include stylesheets -->
+    <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{=URL('static','css/freelancer-bootstrap3.css')}}"/>
+      <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontAwesome.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.eot.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.woff.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+    <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- All JavaScript at the bottom, except for Modernizr which enables
+         HTML5 elements & feature detects -->
+    <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+      
+        {{
+      
+  response.files.append(URL('static','css/freelancer.css'))
+  response.files.append(URL('static','css/bootstrap.min.css'))
+  response.files.append(URL('static','css/bootstrap-responsive.min.css'))
+  response.files.append(URL('static','css/freelancer_bootstrap.css'))
+  response.files.append(URL('static','css/bootstrap.css'))
+  response.files.append(URL('static','css/freelancer.css'))
+  }}
+
+  
+    <!--[if lt IE 9]>
+        <script src="{{=URL('static','js/respond-1.4.2.min.js')}}"></script>
+        <![endif]-->
+    <!-- Favicons -->
+    {{include 'freelancer_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
+      
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                  <img src="../static/img/logoBienAll_icono.ico">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{{=URL('default', 'index')}}" class="navbar-brand" href="#page-top">BienAll</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="{{=URL('default', 'galeria')}}">Galeria</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="{{=URL('default', 'dejaTuHuella')}}">Deja Tu Huella</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Login via
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
+                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        <!-- Galeria Grid Section -->
+    <section id="galeria">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <br>
+                    <h2 class="colorcito">Mas apps</h2>
+                    <hr class="star-primary">
+                    <span class="skills colorcito">Si querés vivir mas experiencias con el arte de nuestro Chaco <br> visitá estas aplicaciones</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-4 galeria-item">
+                    <a href="#galeriaModal1" class="galeria-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../static/img/portfolio/escultor.png" class="img-responsive" alt=""></a>
+                    </a>
+                </div>
+                <div class="col-sm-4 galeria-item">
+                    <a href="#galeriaModal2" class="galeria-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../static/img/portfolio/chuwal.png" class="img-responsive" alt=""></a>
+                    </a>
+                </div>
+                <div class="col-sm-4 galeria-item">
+                    <a href="#galeriaModal3" class="galeria-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../static/img/portfolio/brainchaco.png" class="img-responsive" alt=""></a>
+                    </a>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="col-sm-2 galeria item">
+                </div>
+                <div class="col-sm-4 galeria-item">
+                    <a href="#galeriaModal4" class="galeria-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../static/img/portfolio/informarq.png" class="img-responsive" alt=""></a>
+                    </a>
+                </div>
+                <div class="col-sm-4 galeria-item">
+                    <a href="#galeriaModal5" class="galeria-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../static/img/portfolio/guiartec.png" class="img-responsive" alt=""></a>
+                    </a>
+                </div>
+                <div class="col-sm-2 galeria item">
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h4><a class="ex1 colorcito2" href="#">Mas apps</a></h4>
+                        <!--<p>Frondizi 4 piso 174<br>Resistencia chacop</p>-->
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h4>Comparti BienAll con tus amigos</h4>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.facebook.com/sharer.php?u=http://google.com" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                            <div class="visible-xs">
+                                <a href="whatsapp://send?text=www.google.com.ar" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h4><a class="ex1 colorcito2" href="{{=URL('default', 'nosotros')}}">Nosotros</a></h4>
+                        <!--<p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Chaco - 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+</body>
+</html>
