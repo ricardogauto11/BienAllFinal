@@ -7099,7 +7099,15 @@ a.list-group-item-danger.active:focus {
 .btn-tw:hover{
     color: #fff;
     background-color:#59b5fa;
+} 
+.btn-google-plus{
+    color: #fff;
+    background-color:#DD4B39;
 }
+.btn-google-plus:hover{
+    color: #fff;
+    background-color:#DE0002;
+} 
 @media(max-width:768px){
     #login-dp{
         background-color: inherit;
