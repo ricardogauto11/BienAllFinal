@@ -41,6 +41,54 @@
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+
+
+
+    <script type="text/javascript">(function(d, t, e, m){
+    
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "318776",
+            uid: "f154654836e0689c56b52de871fcdfde",
+            source: "website",
+            options: {
+                "advanced": {
+                    "nero": {
+                        "showDislike": false
+                    },
+                    "font": {
+                        "hover": {
+                            "color": "#B6C3DB"
+                        },
+                        "color": "#B6C3DB"
+                    }
+                },
+                "size": "large",
+                "type": "nero",
+                "label": {
+                    "background": "#3C68BB"
+                },
+                "lng": "es",
+                "style": "thumbs",
+                "isDummy": false
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
       
     {{
       
@@ -127,6 +175,8 @@
                 	<div class="intro-text">
                 		<h2>{{=P(image.title)}}</h2>
                 		<hr class="star-light">
+                        <div class="rw-ui-container"></div>
+
                 		<span class="skills"></span>
                 	</div>
                 </div>
