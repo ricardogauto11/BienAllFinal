@@ -172,11 +172,32 @@
             <div class="row">
                 <div class="col-lg-12">
                 	<img src="{{=URL('download', args = image.archivo)}}" class="img-responsive">
+                    <div class ="row">
+                        <div class ="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+                            <div class="rw-ui-container"></div>
+                        </div>
+                        <div class ="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                <div class="visible-xs">
+                                    <a href="whatsapp://send?text=www.google.com.ar" data-action="share/whatsapp/share" class="btn-social2 btn-outline2"><i class="fa fa-whatsapp"></i></a>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>
                 	<div class="intro-text">
                 		<h2>{{=P(image.title)}}</h2>
                 		<hr class="star-light">
-                        <div class="rw-ui-container"></div>
-
                 		<span class="skills"></span>
                 	</div>
                 </div>
