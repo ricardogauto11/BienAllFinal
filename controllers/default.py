@@ -70,7 +70,7 @@ def nosotros():
     return dict()
 
 def galeria():
-    return dict(galeria = db().select(db.image.ALL, orderby=db.image.id))
+    return dict(galeria = db().select(db.image.ALL, orderby=~db.image.id))
 
 def mostrarFoto():
     image = db.image(request.args(0, cast = int))

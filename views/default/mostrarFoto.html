@@ -41,6 +41,54 @@
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+
+
+
+    <script type="text/javascript">(function(d, t, e, m){
+    
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "318776",
+            uid: "f154654836e0689c56b52de871fcdfde",
+            source: "website",
+            options: {
+                "advanced": {
+                    "nero": {
+                        "showDislike": false
+                    },
+                    "font": {
+                        "hover": {
+                            "color": "#B6C3DB"
+                        },
+                        "color": "#B6C3DB"
+                    }
+                },
+                "size": "large",
+                "type": "nero",
+                "label": {
+                    "background": "#3C68BB"
+                },
+                "lng": "es",
+                "style": "thumbs",
+                "isDummy": false
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
       
     {{
       
@@ -89,21 +137,21 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('default', 'galeria')}}">Galeria</a>
+                        <a href="{{=URL('default', 'galeria')}}">Galería</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('default', 'dejaTuHuella')}}">Deja Tu Huella</a>
+                        <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b> <span class="caret"></span></a>
                         <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        Login via
                                         <div class="social-buttons">
                                             <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
                                             <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
+                                            <a href="#" class="btn btn-google-plus"><i class="fa fa-google"></i> Google + </a>
                                         </div>
                                     </div>    
                                 </div>
@@ -127,6 +175,8 @@
                 	<div class="intro-text">
                 		<h2>{{=P(image.title)}}</h2>
                 		<hr class="star-light">
+                        <div class="rw-ui-container"></div>
+
                 		<span class="skills"></span>
                 	</div>
                 </div>
@@ -144,7 +194,7 @@
                         <!--<p>Frondizi 4 piso 174<br>Resistencia chacop</p>-->
                     </div>
                     <div class="footer-col col-md-4">
-                        <h4>Comparti BienAll con tus amigos</h4>
+                        <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
                                 <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
