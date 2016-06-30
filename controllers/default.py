@@ -79,3 +79,11 @@ def mostrarFoto():
 def nombre():
     return dict(nombre = db().select(db.image.title))
 
+def comentario():
+	image = db.image(request.args(0)) or redirect(URL('index'))
+	db.comment.image_id.default = image.id
+	form = crud.create(db.comment,
+		message = 'your comment is posted',
+		next = URL(args = image.id))
+	comments = db(db.comment.image_id==image.id).select()
+	return dict(image=image, comments=comments, form = form)
