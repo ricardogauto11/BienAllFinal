@@ -2,16 +2,9 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-    <!-- Always force latest IE rendering engine
-         (even in intranet) & Chrome Frame
-         Remove this if you use the .htaccess -->
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
-    <!--  Mobile Viewport Fix
-          j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
-          device-width: Occupy full width of the screen in its current orientation
-          initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-          user-scalable = yes allows the user to zoom in -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{=response.title or request.application}}</title>
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
@@ -120,6 +113,23 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
+
+                                    <script>
+                                      $('.popup').click(function(event) {
+                                        var width  = 50,
+                                            height = 400,
+                                            left   = ($(window).width()  - width)  / 2,
+                                            top    = ($(window).height() - height) / 2,
+                                            url    = this.href,
+                                            opts   = 'status=1' +
+                                                     ',width='  + width  +
+                                                     ',height=' + height +
+                                                     ',top='    + top    +
+                                                     ',left='   + left;
+                                        window.open(url, 'twitter', opts);
+                                        return false;
+                                      });
+                                    </script>
     <!-- Navigation -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -194,36 +204,16 @@
                             </div>
                         </div>
 
-
-
                         <div class ="col-xs-8 col-sm-6 col-md-6 col-lg-6">
                             <ul class="list-inline2 visible-lg">
                                 <li>
-                                    <a data-href="http://192.168.10.87:8000/BienAllFinal/default/mostrarFoto/" class="btn-social2 btn-ouline2"data-layout="icon" data-mobile-iframe="true" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.10.87%3A8000%2FBienAllFinal%2Fdefault%2FmostrarFoto%2F&amp;src=sdkpreparse"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a data-href="http://192.168.10.87:8000/BienAllFinal/default/mostrarFoto/" data-layout="icon" data-mobile-iframe="true" class="btn-social2 btn-ouline2 fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.10.87%3A8000%2FBienAllFinal%2Fdefault%2FmostrarFoto%2F&amp;src=sdkpreparse"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-google" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="http://twitter.com/share?text=Mirá%20esta%20foto%20subida%20en%20BienAll" class="popup btn-social2 btn-outline2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-
-                                    <script>
-                                      $('.popup').click(function(event) {
-                                        var width  = 50,
-                                            height = 400,
-                                            left   = ($(window).width()  - width)  / 2,
-                                            top    = ($(window).height() - height) / 2,
-                                            url    = this.href,
-                                            opts   = 'status=1' +
-                                                     ',width='  + width  +
-                                                     ',height=' + height +
-                                                     ',top='    + top    +
-                                                     ',left='   + left;
-                                        window.open(url, 'twitter', opts);
-                                        return false;
-                                      });
-                                    </script>
-
                                 </li>
                                 <li>
                                 <div class="visible-xs">
@@ -232,10 +222,6 @@
                                 </li>
                             </ul>
                         </div>  
-
-                        
-
-
 
                         <div class="visible-xs visible-sm">
                             <ul class="list-inline3">
