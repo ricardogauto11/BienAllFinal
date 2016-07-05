@@ -176,7 +176,7 @@
                         <hr class="star-light">
                         <span class="skills"></span>
                     </div>
-                	<img src="{{=URL('download', args = image.archivo)}}" class="img-responsive">
+                	<img src="{{=URL('download', args = image.archivo)}}" class="img-responsive"  height="800" width="700">
                     <div class ="row">
                         <div class ="col-xs-4 col-sm-6 col-md-6 col-lg-6">
                             <div class="megusta">
@@ -185,6 +185,9 @@
                                 </li>
                             </div>
                         </div>
+
+
+
                         <div class ="col-xs-8 col-sm-6 col-md-6 col-lg-6">
                             <ul class="list-inline2 visible-lg">
                                 <li>
@@ -202,7 +205,12 @@
                                 </div>
                                 </li>
                             </ul>
-                        </div>   
+                        </div>  
+
+                        
+
+
+
                         <div class="visible-xs visible-sm">
                             <ul class="list-inline3">
                                 <li>
@@ -222,6 +230,24 @@
                             </ul>
                             
                         </div> 
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+
+                        {{if len(comments):}}
+                        <h2>Comentarios</h2><br /><p>
+                        {{for comment in comments:}}
+                            <p>{{=comment.author}}: <i>{{=comment.body}}</i></p>
+                        {{pass}}</p>
+                        {{else:}}
+                        <h2>Todavía no hay comentarios</h2>
+                        {{pass}}
+                        <h2>Escribe un comentario</h2>
+                        <br>
+                        <center>{{=form}}</center>
                     </div>
                 </div>
             </div>
