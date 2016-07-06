@@ -245,18 +245,18 @@
                         <br>
                         
                     </div>
-                        {{if len(comments):}}
-                        <div class="zurdita azul"><h3>Comentarios:</h3> <br>
+                    {{if len(comments):}}
+                     <div class="zurdita azul"><h3>Comentarios:</h3> <br>
                         {{for comment in comments:}}
-                        <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div>
+                            <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div>
                         {{pass}}
-                        {{else:}}
+                    {{else:}}
                         <h2>Todavía no hay comentarios</h2>
-                        {{pass}}
+                    {{pass}}
                         <h2>Escribe un comentario</h2>
                         <br>
-                        {{=form}}</div>
-                    
+                    {{=form}}
+                    </div>
                 </div>
             </div>
         </div>

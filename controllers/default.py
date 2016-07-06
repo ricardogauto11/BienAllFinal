@@ -76,7 +76,7 @@ def mostrarFoto():
     image = db.image(request.args(0, cast = int))
     
     db.comment.image_id.default = image.id
-    form = crud.create(db.comment, 
+    form = crud.create(db.comment,
                                 message = 'your comment is posted',
                                 next = URL(args=image.id))
     comments = db(db.comment.image_id==image.id).select()
