@@ -74,7 +74,6 @@ def galeria():
 
 def mostrarFoto():
     image = db.image(request.args(0, cast = int))
-    
     db.comment.image_id.default = image.id
     form = SQLFORM(db.comment, 
                                 message = 'your comment is posted',

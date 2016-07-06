@@ -62,6 +62,23 @@
 
 
 <body id="page-top" class="index">
+<!--pop up para compartir a TW-->
+        <script>
+          $('.popup').click(function(event) {
+            var width  = 50,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = this.href,
+                opts   = 'status=1' +
+                         ',width='  + width  +
+                         ',height=' + height +
+                         ',top='    + top    +
+                         ',left='   + left;
+            window.open(url, 'twitter', opts);
+            return false;
+          });
+        </script>
 
     <!-- Navigation -->
 
@@ -153,7 +170,7 @@
                                 <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
                             <li>
-                                <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="http://twitter.com/share?text=Visitá%20'BienAll'%20y%20compartí%20tu%20experiencia%20con%20el%20arte" class="popup btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
                             </li>
                             <li>
                             <div class="visible-xs">
