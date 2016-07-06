@@ -105,33 +105,6 @@
 
 
 <body id="page-top" class="index">
-
-    <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/es_CO/sdk.js#xfbml=1&version=v2.6";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-
-        <script>
-          $('.popup').click(function(event) {
-            var width  = 50,
-                height = 400,
-                left   = ($(window).width()  - width)  / 2,
-                top    = ($(window).height() - height) / 2,
-                url    = this.href,
-                opts   = 'status=1' +
-                         ',width='  + width  +
-                         ',height=' + height +
-                         ',top='    + top    +
-                         ',left='   + left;
-            window.open(url, 'twitter', opts);
-            return false;
-          });
-        </script>
     <!-- Navigation -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -215,7 +188,23 @@
                                     <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-google" aria-hidden="true"></i></a>
                                 </li>-->
                                 <li>
-                                    <a href="http://twitter.com/share?text=Mirá%20esta%20foto%20subida%20en%20BienAll" class="popup btn-social2 btn-outline2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="http://twitter.com/status=http://localhost/BienAllFinal/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                <script>
+                                  $('.popup').click(function(event) {
+                                    var width  = 50,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'twitter', opts);
+                                    return false;
+                                  });
+                                </script>
                                 </li>
                                 <li>
                             </ul>
