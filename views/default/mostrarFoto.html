@@ -36,14 +36,14 @@
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
 
 
-    <script type="text/javascript">(function(d, t, e, m){
+<script type="text/javascript">(function(d, t, e, m){
     
     // Async Rating-Widget initialization.
     window.RW_Async_Init = function(){
                 
         RW.init({
-            huid: "318776",
-            uid: "f154654836e0689c56b52de871fcdfde",
+            huid: "318917",
+            uid: "8eacd0c458f457e8f89c9d42245344b8",
             source: "website",
             options: {
                 "advanced": {
@@ -52,15 +52,17 @@
                     },
                     "font": {
                         "hover": {
-                            "color": "#B6C3DB"
+                            "color": "#008EAA"
                         },
-                        "color": "#B6C3DB"
+                        "size": "14px",
+                        "bold": true,
+                        "color": "#008EAA"
                     }
                 },
                 "size": "large",
                 "type": "nero",
                 "label": {
-                    "background": "#3C68BB"
+                    "background": "#AAD1EB"
                 },
                 "lng": "es",
                 "style": "thumbs",
@@ -114,22 +116,22 @@
         }(document, 'script', 'facebook-jssdk'));</script>
 
 
-                                    <script>
-                                      $('.popup').click(function(event) {
-                                        var width  = 50,
-                                            height = 400,
-                                            left   = ($(window).width()  - width)  / 2,
-                                            top    = ($(window).height() - height) / 2,
-                                            url    = this.href,
-                                            opts   = 'status=1' +
-                                                     ',width='  + width  +
-                                                     ',height=' + height +
-                                                     ',top='    + top    +
-                                                     ',left='   + left;
-                                        window.open(url, 'twitter', opts);
-                                        return false;
-                                      });
-                                    </script>
+        <script>
+          $('.popup').click(function(event) {
+            var width  = 50,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = this.href,
+                opts   = 'status=1' +
+                         ',width='  + width  +
+                         ',height=' + height +
+                         ',top='    + top    +
+                         ',left='   + left;
+            window.open(url, 'twitter', opts);
+            return false;
+          });
+        </script>
     <!-- Navigation -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -209,21 +211,16 @@
                                 <li>
                                     <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.10.87%3A8000%2FBienAllFinal%2Fdefault%2FmostrarFoto%2F&amp;src=sdkpreparse" data-href="http://192.168.10.87:8000/BienAllFinal/default/mostrarFoto/" class="btn-social2 btn-outline2 fb-xfbml-parse-ignore" data-layout="icon" data-mobile-iframe="true" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-google" aria-hidden="true"></i></a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href="http://twitter.com/share?text=Mirá%20esta%20foto%20subida%20en%20BienAll" class="popup btn-social2 btn-outline2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
-                                <div class="visible-xs">
-                                    <a href="whatsapp://send?text=www.google.com.ar" data-action="share/whatsapp/share" class="btn-social2 btn-outline2"><i class="fa fa-whatsapp"></i></a>
-                                </div>
-                                </li>
                             </ul>
                         </div>  
-
-                        <div class="visible-xs visible-sm">
+                  <!-- <div class="visible-xs visible-sm">
                             <ul class="list-inline3">
                                 <li>
                                     <a href="#" class="btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -239,28 +236,27 @@
                                     <a href="whatsapp://send?text=www.google.com.ar" data-action="share/whatsapp/share" class="btn-social2 btn-outline2"><i class="fa fa-whatsapp"></i></a>
                                 </div>
                                 </li>
-                            </ul>
-                            
-                        </div> 
+                            </ul>                        
+                        </div> -->
 
                         <br>
                         <br>
                         <br>
                         <br>
                         
-
+                    </div>
                         {{if len(comments):}}
-                        <h2>Comentarios</h2><br /><p>
+                        <div class="zurdita azul"><h3>Comentarios:</h3> <br>
                         {{for comment in comments:}}
-                            <p>{{=comment.author}}: <i>{{=comment.body}}</i></p>
-                        {{pass}}</p>
+                        <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div>
+                        {{pass}}
                         {{else:}}
                         <h2>Todavía no hay comentarios</h2>
                         {{pass}}
                         <h2>Escribe un comentario</h2>
                         <br>
-                        <center>{{=form}}</center>
-                    </div>
+                        {{=form}}</div>
+                    
                 </div>
             </div>
         </div>
@@ -279,13 +275,13 @@
                         <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/BienAllFinal/default/index" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
                                 <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
                             <li>
-                                <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="http://twitter.com/share?text=Visitá%20'BienAll'%20y%20compartí%20tu%20experiencia%20con%20el%20arte" class="popup btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
                             </li>
                             <li>
                             <div class="visible-xs">
