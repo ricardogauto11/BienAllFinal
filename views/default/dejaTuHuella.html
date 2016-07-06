@@ -146,16 +146,48 @@
                         <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://google.com" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="http://twitter.com/status=http://localhost/BienAllFinal/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                                 <script>
                                   $('.popup').click(function(event) {
-                                    var width  = 50,
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'facebook', opts);
+                                    return false;
+                                  });
+                                </script>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <script>
+                                  $('.popup2').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'google', opts);
+                                    return false;
+                                  });
+                                </script>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://localhost/BienAllFinal/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                <script>
+                                  $('.popup3').click(function(event) {
+                                    var width  = 400,
                                         height = 400,
                                         left   = ($(window).width()  - width)  / 2,
                                         top    = ($(window).height() - height) / 2,
@@ -175,7 +207,6 @@
                                 <a href="whatsapp://send?text=http://192.168.10.97:8000/BienAllFinal/default/index" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
                             </div>
                             </li>
-
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
