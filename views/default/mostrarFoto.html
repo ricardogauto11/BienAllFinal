@@ -314,9 +314,27 @@
         </a>
     </div>
 
+ <script>
+    var load = false;
+    window.onload = function(){
+      if(!load) {
+        wmark.init({/* config goes here */
+        "position": "top-right", // default "bottom-right"
+        "opacity": 50, // default 50
+        "className": "watermark", // default "watermark"
+        "path": "http://www.patrick-wied.at/static/watermarkjs/demos/img/watermark.png"
+                   });
+             load = true;
+
+                        }
+
+                }
+
+        </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="../watermark.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
