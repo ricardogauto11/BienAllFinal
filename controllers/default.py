@@ -75,12 +75,11 @@ def galeria():
 def mostrarFoto():
     image = db.image(request.args(0, cast = int))
     db.comment.image_id.default = image.id
-    form = SQLFORM(db.comment, 
-                                message = 'your comment is posted',
-                                next = URL(args=image.id))
+    form = SQLFORM(db.comment)
+    if form.accepts(request.vars, session):
+        redirect (URL('default', 'mostrarFoto', args=image.id))
     comments = db(db.comment.image_id==image.id).select()
     return dict (image=image, comments=comments, form=form)
 
 def nombre():
     return dict(nombre = db().select(db.image.title))
-

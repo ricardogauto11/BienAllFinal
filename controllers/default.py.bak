@@ -23,7 +23,7 @@ def dejaTuHuella():
     	form = SQLFORM(db.image)
     	if form.accepts (request.vars, session):
     		response.flash = 'Imagen cargada correctamente!'
-    		redirect (URL ('galleryController', 'index'))
+    		redirect (URL ('default', 'galeria'))
     	return dict(form = form)
 
 def user():
@@ -65,3 +65,22 @@ def call():
 
 def masApps():
     return dict()
+
+def nosotros():
+    return dict()
+
+def galeria():
+    return dict(galeria = db().select(db.image.ALL, orderby=~db.image.id))
+
+def mostrarFoto():
+    image = db.image(request.args(0, cast = int))
+    db.comment.image_id.default = image.id
+    form2 = SQLFORM(db.comment, 
+                                message = 'your comment is posted',
+                                next = URL(args=image.id))
+    comments = db(db.comment.image_id==image.id).select()
+    return dict (image=image, comments=comments, form=form)
+
+def nombre():
+    return dict(nombre = db().select(db.image.title))
+
