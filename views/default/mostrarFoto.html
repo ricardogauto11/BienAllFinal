@@ -246,17 +246,16 @@
                         
                     </div>
                     {{if len(comments):}}
-                     <div class="zurdita azul"><h3>Comentarios:</h3> <br>
+                     <div class="zurdita azul"><h3>Comentarios:</h3><br></div>
                         {{for comment in comments:}}
-                            <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div>
+                            <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div><br>
                         {{pass}}
                     {{else:}}
-                        <h2>Todavía no hay comentarios</h2>
+                        <div class="zurdita negro"><h3>Todavía no hay comentarios</h3></div><br>
                     {{pass}}
-                        <h2>Escribe un comentario</h2>
+                        <div class="zurdita azul"><h4>Escribe un comentario</h4></div>
                         <br>
-                    {{=form}}
-                    </div>
+                    <div class="zurdita azul">{{=form}}</div>
                 </div>
             </div>
         </div>
