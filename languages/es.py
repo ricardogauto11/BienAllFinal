@@ -117,6 +117,7 @@
 'db': 'bdd',
 'DB Model': 'Modelo BDD',
 'Debe escribir un comentario que no supere los 140 caracteres': 'Debe escribir un comentario que no supere los 140 caracteres',
+'Debe escribir un titulo que NO supere los 25 caracteres': 'Debe escribir un titulo que NO supere los 25 caracteres',
 'defines tables': 'define tablas',
 'Delete': 'Eliminar',
 'delete': 'eliminar',

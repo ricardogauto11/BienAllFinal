@@ -141,7 +141,7 @@ db.define_table('comment',
     Field ('author', label=T('Autor')),
     Field('body','text', label=T('Comentario')))
 
-db.image.title.requires = [IS_NOT_IN_DB(db,db.image.title), IS_NOT_EMPTY (error_message = T('Debe escribir un título de la imagen')), IS_LENGTH(25, error_message= T('Debe escribir un titulo que NO supere los 25 caracteres'))]
+db.image.title.requires = [IS_NOT_IN_DB(db,db.image.title), IS_NOT_EMPTY (error_message = T('Debe escribir un título de la imagen')), IS_LENGTH(35, error_message= T('Debe escribir un titulo que NO supere los 35 caracteres'))]
 db.image.archivo.requires = [IS_NOT_EMPTY (error_message = T('No ha cargado ninguna imagen!')), IS_IMAGE (error_message = T('El archivo cargado no es una imagen.')), IS_LENGTH(5048576, 1024, error_message= T('Debe ingresar una imagen que no supere 5 MB'))]
 db.comment.image_id.requires = IS_IN_DB(db,db.image.id,'%(title)s')
 db.comment.author.requires = IS_NOT_EMPTY(error_message = T('Ingrese su nombre, por favor.'))
