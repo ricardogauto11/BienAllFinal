@@ -1,0 +1,23 @@
+.marca-de-agua {
+  background-image: url("../img/logomarcadeagua.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.marca-de-agua img {
+  padding: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: auto;
+}
+ .water {
+    position:relative; top: -50px;
+
+ }
