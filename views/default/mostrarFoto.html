@@ -170,7 +170,7 @@
                         <div class ="col-xs-8 col-sm-6 col-md-6 col-lg-6">
                             <ul class="list-inline2 visible-lg visible-md visible-sm">
                                 <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.10.87%3A8000%2FBienAllFinal%2Fdefault%2FmostrarFoto%2F&amp;src=sdkpreparse" class="btn-social2 btn-outline2 fb-xfbml-parse-ignore"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');" class="popup4 btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -189,7 +189,8 @@
                                 </script>
                                 </li>
                                 <li>
-                                    <a href="http://twitter.com/home?status=Visita%20la%20página%20de%20BienAll http://localhost/BienAllFinal/default/mostrarFoto" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+
+                                   <a href="http://twitter.com/home?status=Visita%20la%20página%20de%20BienAll http://localhost:8000{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
                                 <script>
                                   $('.popup4').click(function(event) {
                                     var width  = 400,
@@ -243,7 +244,8 @@
                         <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                               <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+
                                 <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -262,7 +264,8 @@
                                 </script>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/share?url=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+
                                 <script>
                                   $('.popup2').click(function(event) {
                                     var width  = 400,
