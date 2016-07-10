@@ -34,12 +34,13 @@
     <link href="../static/font-awesome/css/fontawesome-webfont.woff.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  
+ 
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{=URL('static','js/main.js')}}"></script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
       
         {{
@@ -94,22 +95,9 @@
                     <li class="page-scroll">
                         <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b> <span class="caret"></span></a>
-                        <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
-                                            <a href="#" class="btn btn-google-plus"><i class="fa fa-google"></i> Google + </a>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                     <li class="page-scroll">
+                        <a href="#" id="login" class="btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"></i></a>  
+                    </li>    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -253,6 +241,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 </body>
 
