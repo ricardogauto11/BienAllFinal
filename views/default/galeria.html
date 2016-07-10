@@ -126,7 +126,7 @@
                 </div>
             </div>
             <br>
-
+                <div class="row">
                 {{for image in galeria:}}
                     <div class="col-sm-4 galeria-item">
                         <a href="{{=URL('default', 'mostrarFoto', args = image.id)}}">
@@ -134,8 +134,7 @@
                         </a>
                     </div>
                 {{pass}} 
-
- 
+               </div> 
          </div>      
     </section>
           
