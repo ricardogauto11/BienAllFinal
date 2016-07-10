@@ -130,8 +130,7 @@ auth.settings.reset_password_requires_verification = True
 # auth.enable_record_versioning(db)
 
 db.define_table('image',
-    Field('archivo','upload', uploadfolder = path.join (
-        request.folder, 'static', 'images', 'gallery'),
+    Field('archivo','upload',
                 label= T('')),
     Field('title',
         label=T('Descripción:')))
