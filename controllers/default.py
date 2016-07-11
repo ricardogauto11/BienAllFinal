@@ -6,8 +6,8 @@
 # - index is the default action of any application
 # - user is required for authentication and authorization
 # - download is for downloading files uploaded in the db (does streaming)
-# -------------------------------------------------------------------------
-
+# ----------------------------------------------------------------------
+import math
 
 def index():
     """
@@ -70,7 +70,45 @@ def nosotros():
     return dict()
 
 def galeria():
-    return dict(galeria = db().select(db.image.ALL, orderby=~db.image.id))
+    """
+    per_page = 6
+    adjacents = 6
+    if not request.vars.page:
+        redirect (URL(vars={'page':1}))
+    else:
+        page = int (request.vars.page)
+    start = (page-1)* per_page
+    end = page * per_page
+    
+    perpage = 6
+    totalposts = db(db.image.id > 0).count()
+    pages = totalposts / perpage
+    if totalposts > perpage and pages == 1 and pages * perpage != totalposts:
+        pages = 2
+    page = int(request.vars.page) if request.vars.page else 1
+    limit = int(page - 1) * perpage
+    """
+    perpage = 6
+    if not request.vars.page:
+        redirect (URL(vars={'page':1}))
+    else:
+        page = int(request.vars.page)
+    total = db(db.image.id > 0).count()
+    pages = math.ceil(total // perpage)
+    start = (page-1) * perpage
+    end = page * perpage
+    prev=page-1 if page > 0 else None
+    prox=page+1 if page < pages else None
+    if end > total:
+        end = total
+    galeria = db(db.image.id > 0).select(orderby=~db.image.id, limitby=(start, end))
+    return dict(galeria=galeria,
+        start=start,
+        end=end,
+        total=total,
+        prev=prev,
+        prox=prox,
+        pages=pages)
 
 def mostrarFoto():
     image = db.image(request.args(0, cast = int))

@@ -146,3 +146,7 @@ db.comment.image_id.requires = IS_IN_DB(db,db.image.id,'%(title)s')
 db.comment.author.requires = IS_NOT_EMPTY(error_message = T('Ingrese su nombre, por favor.'))
 db.comment.body.requires = [IS_NOT_EMPTY(error_message = T('Agregue un comentario.')), IS_LENGTH(140, error_message= T('Debe escribir un comentario que no supere los 140 caracteres'))]
 db.comment.image_id.writable = db.comment.image_id.readable = False
+
+if not db(db.image).count():
+    from gluon.contrib.populate import populate
+    populate (db.image, 6)

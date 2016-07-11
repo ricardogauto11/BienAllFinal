@@ -1,0 +1,18 @@
+<table class="table table-striped">
+	<tbody>
+	{{for image in images:}}
+		<tr>
+			<td>{{=image.archivo}}</td>
+			<td>
+				<button class="btn"><i class="icon-edit"></i>Editar</button>
+			</td>
+			<td>
+				<button class="btn"><i class="icon-trash"></i>Borrar</button>
+			</td>
+		</tr>
+	{{pass}}
+	</tbody>
+</table>
+
+<a href={{=URL(vars={'page':int(request.vars.page)-1})}}>Anterior</a> |
+<a href={{=URL(vars={'page':int(request.vars.page)+1})}}>Proximo</a>
