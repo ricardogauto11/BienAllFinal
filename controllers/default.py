@@ -71,22 +71,13 @@ def nosotros():
 
 def galeria():
     """
-    per_page = 6
-    adjacents = 6
-    if not request.vars.page:
-        redirect (URL(vars={'page':1}))
-    else:
-        page = int (request.vars.page)
-    start = (page-1)* per_page
-    end = page * per_page
-    
-    perpage = 6
-    totalposts = db(db.image.id > 0).count()
-    pages = totalposts / perpage
-    if totalposts > perpage and pages == 1 and pages * perpage != totalposts:
-        pages = 2
-    page = int(request.vars.page) if request.vars.page else 1
-    limit = int(page - 1) * perpage
+    ipp = 6
+    if len(request.args): page = int(request.args[0])
+    else: page = 0
+    ipp = 6
+    limitby = (page*ipp, (page+1)*ipp+1)
+    rows = db().select(db.image.ALL, limitby=limitby)
+    return dict(galeria=galeria, rows=rows, page=page, ipp=ipp)
     """
     perpage = 6
     if not request.vars.page:

@@ -65,9 +65,7 @@
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -129,7 +127,7 @@
          <div class="text-center">
         <nav>
             <ul class="pager">
-                <li><a href="{{=URL(vars={'page':int(request.vars.page)-1})}}">Previous</a></li>
+               <li><a href="{{=URL(vars={'page':int(request.vars.page)-1})}}">Previous</a></li>
                 <li><a href="{{=URL(vars={'page':int(request.vars.page)+1})}}">Next</a></li>
             </ul>
         </nav>
