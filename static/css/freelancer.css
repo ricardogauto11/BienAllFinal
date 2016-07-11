@@ -629,3 +629,6 @@ ul.social-buttons li a:active {
 .peque{
     font-size: 2em;
 }
+#logout {
+    margin-top: 10px;  
+}

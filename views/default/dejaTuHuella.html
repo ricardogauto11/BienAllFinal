@@ -39,7 +39,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{=URL('static','js/main.js')}}"></script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="shortcut icon" href="../static/img/pestana.ico" />
       
         {{
       
@@ -92,22 +95,9 @@
                     <li class="page-scroll">
                         <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b> <span class="caret"></span></a>
-                        <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
-                                            <a href="#" class="btn btn-google-plus"><i class="fa fa-google"></i> Google + </a>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                    <li class="page-scroll">
+                        <a href="#" id="login" class="btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"></i></a>  
+                    </li>   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -146,7 +136,7 @@
                         <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                                 <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -165,7 +155,7 @@
                                 </script>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/share?url=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                                 <script>
                                   $('.popup2').click(function(event) {
                                     var width  = 400,
@@ -184,7 +174,7 @@
                                 </script>
                             </li>
                             <li>
-                                <a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://localhost/BienAllFinal/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                 <a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://localhost/BienAllFinal/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
                                 <script>
                                   $('.popup3').click(function(event) {
                                     var width  = 400,
@@ -235,3 +225,15 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+
+</html>

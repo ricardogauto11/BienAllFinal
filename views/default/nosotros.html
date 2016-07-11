@@ -39,7 +39,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{=URL('static','js/main.js')}}"></script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="shortcut icon" href="../static/img/pestana.ico" />
       
         {{
       
@@ -57,7 +60,7 @@
         <![endif]-->
     <!-- Favicons -->
     {{include 'freelancer_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
-      
+
 </head>
 
 <body id="page-top" class="index">
@@ -109,22 +112,9 @@
                     <li class="page-scroll">
                         <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Inicia sesión</b> <span class="caret"></span></a>
-                        <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </li>
-                        </ul>
+                    <li class="page-scroll">
+                        <a href="#" id="login" class="btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"></i></a>  
                     </li>
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -161,86 +151,91 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Super equipo</h2>
-                    <h3 class="section-subheading text-muted">Conocenos ;)</h3>
+                    <h2 class="section-heading">Nuestro equipo</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../static/img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Jipi Conosde</h4>
-                        <p class="text-muted chica">Poop Master</p>
+                        <img src="../static/img/team/ricardo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ricardo Gauto</h4>
+                        <p class="text-muted chica"></p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/ricardogauto11"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/ricardogauto11"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/ricardogauto11"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../static/img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Antonia Macri</h4>
-                        <p class="text-muted chica">Quejas Master</p>
+                        <img src="../static/img/team/pablo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Pablo Bielsa</h4>
+                        <p class="text-muted chica"></p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/pablo_bielsa"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/pablobielsa"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/pablojmbielsa"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../static/img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Osito</h4>
-                        <p class="text-muted chica">Food Master</p>
+                        <img src="../static/img/team/ana.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ana Pokorasky</h4>
+                        <p class="text-muted chica"></p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/LaJuanex?lang=es"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/anitaPokorasky"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/ana-victoria-pokorasky-1a515311b?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-2 galeria item">
+                </div>
             <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../static/img/team/4.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Hey.Gente.Sh</h4>
-                        <p class="text-muted chica">Shh Master</p>
+                        <img src="../static/img/team/flo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Florencia Aguirre</h4>
+                        <p class="text-muted chica"></p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/aguirreflomik"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/floaguirre"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/floaguirre?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../static/img/team/5.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Gluten Free</h4>
-                        <p class="text-muted chica">Algo Master</p>
+                        <img src="../static/img/team/cesar.png" class="img-responsive img-circle" alt="">
+                        <h4>César Villegas</h4>
+                        <p class="text-muted chica"></p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/tato_cmv"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/tato.cmv"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/villegascesar"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="col-sm-2 galeria item">
                 </div>
        <!-- <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -331,7 +326,8 @@
                         <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://bienaldelchaco.org" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+
                                 <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -350,7 +346,8 @@
                                 </script>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/share?url=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+
                                 <script>
                                   $('.popup2').click(function(event) {
                                     var width  = 400,
@@ -386,6 +383,11 @@
                                     return false;
                                   });
                                 </script>
+                            </li>
+                            <li>
+                            <div class="visible-xs">
+                                <a href="whatsapp://send?text=http://192.168.10.97:8000/BienAllFinal/default/index" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
+                            </div>
                             </li>
                         </ul>
                     </div>
@@ -432,7 +434,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>
