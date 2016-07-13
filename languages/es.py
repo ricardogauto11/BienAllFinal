@@ -56,6 +56,8 @@
 'Authentication failed at client DB!': '¡La autenticación ha fallado en la BDD cliente!',
 'Authentication failed at main DB!': '¡La autenticación ha fallado en la BDD principal!',
 'Autor': 'Autor',
+'Autor      ': 'Autor      ',
+'Autor    .': 'Autor    .',
 'Available Databases and Tables': 'Bases de datos y tablas disponibles',
 'Back': 'Atrás',
 'BIENALL': 'BIENALL',
