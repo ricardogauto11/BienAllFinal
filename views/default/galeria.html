@@ -118,7 +118,7 @@
                 {{for image in galeria:}}
                     <div class="col-sm-4 galeria-item">
                         <a href="{{=URL('default', 'mostrarFoto', args = image.id)}}">
-                            <img src="{{=URL('default', 'download', args = image.archivo)}}" class="img-responsive img-thumbnail" style="width:350px; height:280">
+                            <img src="{{=URL('default', 'download', args = image.archivo)}}" class="img-responsive img-thumbnail" style="width:350px; height:280px">
                         </a>
                     </div>
                 {{pass}}
