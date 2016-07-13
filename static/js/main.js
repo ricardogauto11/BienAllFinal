@@ -6,7 +6,7 @@ $(function() {
   var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"</a>';
 
   var div_session = "<div id='facebook-session'>"+
-            "<a href='#' id='logout' class='btn btn-danger'>Cerrar sesión</a>"+
+            "<a href='#' id='logout' class='btn btn-success'>Cerrar sesión</a>"+
             "</div>";
 
   window.fbAsyncInit = function() {
