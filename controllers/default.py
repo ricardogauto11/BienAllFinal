@@ -70,24 +70,22 @@ def nosotros():
     return dict()
 
 def galeria():
-    """
-    ipp = 6
     if len(request.args): page = int(request.args[0])
     else: page = 0
     ipp = 6
     limitby = (page*ipp, (page+1)*ipp+1)
-    rows = db().select(db.image.ALL, limitby=limitby)
-    return dict(galeria=galeria, rows=rows, page=page, ipp=ipp)
+    galeria = db().select(db.image.ALL, orderby=~db.image.id, limitby=limitby)
+    return dict (galeria=galeria, page=page, ipp=ipp)
     """
-    perpage = 6
     if not request.vars.page:
         redirect (URL(vars={'page':1}))
     else:
         page = int(request.vars.page)
     total = db(db.image.id > 0).count()
-    pages = math.ceil(total // perpage)
-    start = (page-1) * perpage
-    end = page * perpage
+    ipp = 6
+    pages = math.ceil(total // ipp)
+    start = (page-1) * ipp
+    end = page * ipp
     prev=page-1 if page > 0 else None
     prox=page+1 if page < pages else None
     if end > total:
@@ -100,6 +98,7 @@ def galeria():
         prev=prev,
         prox=prox,
         pages=pages)
+    """
 
 def mostrarFoto():
     image = db.image(request.args(0, cast = int))
