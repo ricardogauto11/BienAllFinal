@@ -493,7 +493,7 @@ a.ex1:hover, a.ex1:active {
 .list-inline2 {
   padding-left: 0;
   list-style: none;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 .list-inline2 > li {
   display: inline-block;
