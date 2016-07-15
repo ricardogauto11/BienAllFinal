@@ -95,7 +95,7 @@ AUTH_URL='https://www.facebook.com/dialog/oauth'
 TOKEN_URL='https://graph.facebook.com/oauth/access_token'
 redirect_uri = 'http://localhost:8000/'
 
-from facebook import GraphAPI, GraphAPIError
+#from facebook import GraphAPI, GraphAPIError
 from gluon.contrib.login_methods.oauth20_account import OAuthAccount
 
 try:
