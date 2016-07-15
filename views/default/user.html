@@ -1,33 +1,92 @@
-<h2>
-{{=T('Sign Up') if request.args(0) == 'register' else T('Log In') if request.args(0) == 'login' else T(request.args(0).replace('_',' ').title())}}
-</h2>
+$(function() {
 
-<div class="container">
-    <div class="row">
-        <div id="web2py_user_form" class="col-lg-6">
-        {{
-        if request.args(0)=='login':
-            if not 'register' in auth.settings.actions_disabled:
-                form.add_button(T('Sign Up'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn btn-default')
-            pass
-            if not 'request_reset_password' in auth.settings.actions_disabled:
-                form.add_button(T('Lost Password'),URL(args='request_reset_password'),_class='btn btn-default')
-            pass
-        pass
-        =form
-        }}
-        </div>
-    </div>
-</div>
+    var app_id = '1108738092498964';
+    var scopes = 'public_profile, email, user_friends';
+
+    var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
+
+    var div_session = "<div id='facebook-session'>"+
+                      "<strong></strong>"+
+                      "<img>"+
+                      "<a href='#' id='logout' class='btn btn-danger'>Cerrar sesión</a>"+
+                      "</div>";
+
+    window.fbAsyncInit = function() {
+
+        FB.init({
+            appId      : '1108738092498964',
+            status     : true,
+            cookie     : true, 
+            xfbml      : true, 
+            version    : 'v2.6'
+        });
 
 
-{{block page_js}}
-<script>
-    jQuery("#web2py_user_form input:visible:enabled:first").focus();
-{{if request.args(0)=='register':}}
-    web2py_validate_entropy(jQuery('#auth_user_password'),100);
-{{elif request.args(0)=='change_password':}}
-    web2py_validate_entropy(jQuery('#no_table_new_password'),100);
-{{pass}}
-</script>
-{{end page_js}}
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response, function() {});
+        });
+    };
+
+    var statusChangeCallback = function(response, callback) {
+        console.log(response);
+        
+        if (response.status === 'connected') {
+            getFacebookData();
+        } else {
+            callback(false);
+        }
+    }
+    
+    var checkLoginState = function(callback) {
+        FB.getLoginStatus(function(response) {
+            callback(response);
+        });
+    }
+    var getFacebookData =  function() {
+        FB.api('/me', function(response) {
+            $('#login').after(div_session);
+            $('#login').remove();
+            $('#facebook-session strong').text("Bienvenido: "+response.name);
+            $('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
+        });
+    }
+
+    var facebookLogin = function() {
+        checkLoginState(function(data) {
+            if (data.status !== 'connected') {
+                FB.login(function(response) {
+                    if (response.status === 'connected')
+                        getFacebookData();
+                }, {scope: scopes});
+            }
+        })
+    }
+
+    var facebookLogout = function() {
+        checkLoginState(function(data) {
+            if (data.status === 'connected') {
+                FB.logout(function(response) {
+                    $('#facebook-session').before(btn_login);
+                    $('#facebook-session').remove();
+                })
+              }
+        })
+    }
+
+    $(document).on('click', '#login', function(e) {
+        e.preventDefault();
+
+        facebookLogin();
+    })
+
+    $(document).on('click', '#logout', function(e) {
+  
+      e.preventDefault();
+
+        if (confirm("¿Está seguro?"))
+            facebookLogout();
+        else 
+            return false;
+    })
+
+})
