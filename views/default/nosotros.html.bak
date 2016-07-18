@@ -39,7 +39,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{=URL('static','js/main.js')}}"></script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="shortcut icon" href="../static/img/pestana.ico" />
       
         {{
       
@@ -57,10 +60,27 @@
         <![endif]-->
     <!-- Favicons -->
     {{include 'freelancer_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
-      
+
 </head>
 
 <body id="page-top" class="index">
+<!--pop up para compartir a TW-->
+        <script>
+          $('.popup').click(function(event) {
+            var width  = 50,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = this.href,
+                opts   = 'status=1' +
+                         ',width='  + width  +
+                         ',height=' + height +
+                         ',top='    + top    +
+                         ',left='   + left;
+            window.open(url, 'twitter', opts);
+            return false;
+          });
+        </script>
 
     <!-- Navigation -->
 
@@ -87,59 +107,211 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('galleryController', 'index')}}">Galeria</a>
+                        <a href="{{=URL('default', 'galeria')}}">Galería</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('default', 'dejaTuHuella')}}">Deja Tu Huella</a>
+                        <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-                        <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        Login via
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook </a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter </a>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
+                    <!--<li class="page-scroll">
+                        <a href="#" id="login" class="btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"></i></a>  
+                    </li> -->   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-        <!-- Nosotros -->
+
+<!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../static/img/qbits.png" alt="" width="150" height="150">
+                    <div class="intro-text">
+                        <!--<span class="peque"><b>QBITS</b></span>-->
+                        <hr class="star-light">
+                        <span class="skills">Quality bits</span><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2 negro">
+                    <p class="qbits">Es una empresa creada en el Informatorio 2016, que nace desde la iniciativa de crear aplicaciones para motivar el turismo. </p>
+                </div>
+                <div class="col-lg-4 negro">
+                    <p class="qbits"> BienAll fue creada para que todos aquellos apasionados por el arte y las fotografias puedan compartir su experiencia con el mundo a través de fotos de esculturas y arte en general del Chaco y asi impulsar el turismo en nuestra provincia</p>
+                </div>
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">
+                </div>-->
+            </div>
+        </div>
+    </header>
+    <section id="contact" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nuestro equipo</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/ricardo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ricardo Gauto</h4>
+                        <p class="text-muted chica"></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/ricardogauto11" target=_blank><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/ricardogauto11" target=_blank><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/ricardogauto11" target=_blank><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/pablo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Pablo Bielsa</h4>
+                        <p class="text-muted chica"></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/pablo_bielsa" target=_blank><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/pablobielsa" target=_blank><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/pablojmbielsa" target=_blank><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/ana.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ana Pokorasky</h4>
+                        <p class="text-muted chica"></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/LaJuanex?lang=es" target=_blank><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/anitaPokorasky" target=_blank><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/ana-victoria-pokorasky-1a515311b?trk=nav_responsive_tab_profile_pic" target=_blank><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 galeria item">
+                </div>
+            <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/flo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Florencia Aguirre</h4>
+                        <p class="text-muted chica"></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/aguirreflomik" target=_blank><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/floaguirre" target=_blank><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/floaguirre?trk=nav_responsive_tab_profile" target=_blank><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/cesar.png" class="img-responsive img-circle" alt="">
+                        <h4>César Villegas</h4>
+                        <p class="text-muted chica"></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/tato_cmv" target=_blank><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/tato.cmv" target=_blank><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/villegascesar" target=_blank><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2 galeria item">
+                </div>
+       <!-- <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                   <center> <img class="img-responsive" src="../static/img/info.png" alt="" width="300" height="300"></center>                   
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2 negro">
+                    <p>El Informatorio Chaco es un Laboratorio de Capacitaciones Informáticas, una iniciativa que surge como acción concreta luego del trabajo de vinculación entre Universidad, Industria y Estado, quienes a partir del análisis llevado a cabo en el Foro de Competitividad de la Industria de SSI (año 2009 al 2010) se propusieron como estrategia la “Formación de Recursos Humanos en Herramientas Informáticas específicas”.</p>
+                </div>
+                <div class="col-lg-4 negro">
+                    <p> El proyecto del Informatorio es un claro ejemplo que demuestra el valor del curso y la vinculación y trabajo en conjunto con UTN-FRRe, Sistemas Globales, las Empresas del Polo IT Chaco y el Ministerio de Industria, Empleo y Trabajo. </p>
+                </div>
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">
+                </div>-->
+            </div>
+        </div>
+    </section>-->
+
+    <!-- About Section -->
     <section class="success" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center"><br>
-                    <h2>Nosotros</h2>
-                    <hr class="star-light"><br><br><br><br>
+                <div class="col-lg-12">
+                   <center> <img class="img-responsive" src="../static/img/bienal.jpg" alt="" width="400" height="400"></center>  
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>BienAll es una aplicación web desarrollada por <b>Qbits</b> para que las personas que visiten la Bienal del Chaco o los
-                    amantes del arte y las fotografias puedan compartir sus fotografias con el mundo</p>
-                    <a href="https://www.facebook.com/qbits.ar/"><img class="img-responsive" src="../static/img/qbits.png" width="80" height="80"></a>
+                    <p>La Bienal del Chaco fue declarada de interés municipal, provincial y nacional. Fue declarada de interés turístico y reconocida con la licencia Marca País Argentina por el Ministerio de Turismo de la Nación. Declarada de interés cultural por la Organización de los Estados Americanos, la Secretaría General de la Presidencia de la Nación, el Ministerio de Cultura, el Senado, el Ministerio de Relaciones Exteriores y Culto y por la Cámara de Diputados de la Provincia del Chaco.   </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Qbits está integrado por: Flo Aguirre, Pablo Bielsa, Ricardo Gauto, Ana Pokorasky y Tato Villegas, y es parte del <i>Curso avanzado de desarrollo de aplicaciones</i> que se dicta en el <b>Informatorio</b></p>
-                    <a href="https://www.facebook.com/informatorio/"><img class="img-responsive" src="../static/img/info.png"> </a><br><br><br><br><br><br><br>
+                    <p>Distinguida por su alto interés artístico y cultural con el auspicio de La Academia Nacional de Bellas Artes y el Fondo Nacional de las Artes. Reconocida por la Asociación Argentina de Críticos de Arte con el premio Alfredo Roland a la trayectoria cultural y por la Fundación Konex con el premio Konex a las artes visuales argentinas. Desde el año 1997 cuenta con el auspicio permanente de la UNESCO.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                   <center> <img class="img-responsive" src="../static/img/urunday.jpg" alt="" width="400" height="400"></center>  
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>La Fundación Urunday ha logrado promover la Cultura mediante una de sus disciplinas, instalar los concursos al aire libre como espacio de intercambio sociocultural entre el artista y los distintos pueblos de nuestro país y del mundo, </p>
+                </div>
+                <div class="col-lg-4">
+                    <p> insertar a la Argentina en los circuitos internacionales de concursos de escultura en espacios públicos y transformar a Resistencia en un museo al aire libre de características únicas, con miras de ser reconocida como patrimonio cultural de la humanidad.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="text-center">
@@ -147,30 +319,80 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h4><a class="ex1 colorcito2" href="{{=URL('default', 'masApps')}}">Mas apps</a></h4>
+                        <h4><a href="{{=URL('default', 'masApps')}}">Apps relacionadas</a></h4>
                         <!--<p>Frondizi 4 piso 174<br>Resistencia chacop</p>-->
                     </div>
                     <div class="footer-col col-md-4">
-                        <h4>Comparti BienAll con tus amigos</h4>
+                        <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://google.com" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+
+                                <script>
+                                  $('.popup').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'facebook', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/share?url=http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+
+                                <script>
+                                  $('.popup2').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'google', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                                <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                <script>
+                                  $('.popup3').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'twitter', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                             <div class="visible-xs">
-                                <a href="whatsapp://send?text=www.google.com.ar" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
+                            <div class="visible-xs">
+                                <a href="whatsapp://send?text=http://informatorio.pythonanywhere.com/BienAll/default/index" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
                             </div>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h4><a class="ex1 colorcito2" href="{{=URL('default', 'nosotros')}}">Nosotros</a></h4>
+                        <h4><a href="{{=URL('default', 'nosotros')}}">Nosotros</a></h4>
                         <!--<p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>-->
                     </div>
                 </div>
@@ -180,7 +402,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Chaco - 2016
+                    Creado por <a href="https://fb.com/qbits.ar/" target=_blank>Qbits</a>
                     </div>
                 </div>
             </div>
@@ -212,7 +434,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>
