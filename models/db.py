@@ -4,6 +4,7 @@
 # This scaffolding model makes your app work on Google App Engine too
 # File is released under public domain and you can use without limitations
 # -------------------------------------------------------------------------
+from contrib.appconfig import AppConfig
 
 if request.global_settings.web2py_version < "2.14.1":
     raise HTTP(500, "Requires web2py 2.13.3 or newer")
@@ -17,8 +18,6 @@ if request.global_settings.web2py_version < "2.14.1":
 # -------------------------------------------------------------------------
 # app configuration made easy. Look inside private/appconfig.ini
 # -------------------------------------------------------------------------
-from os import path
-from gluon.contrib.appconfig import AppConfig
 
 # -------------------------------------------------------------------------
 # once in production, remove reload=True to gain full speed
@@ -29,7 +28,7 @@ if not request.env.web2py_runtime_gae:
     # ---------------------------------------------------------------------
     # if NOT running on Google App Engine use SQLite or other DB
     # ---------------------------------------------------------------------
-    db = DAL('sqlite://storage.sqlite', pool_size = 0)
+    db = DAL('sqlite://storage.sqlite', pool_size=0)
 else:
     # ---------------------------------------------------------------------
     # connect to Google BigTable (optional 'google:datastore://namespace')
@@ -78,9 +77,9 @@ response.form_label_separator = myconf.get('forms.separator') or ''
 # (more options discussed in gluon/tools.py)
 # -------------------------------------------------------------------------
 
+# host names must be a list of allowed host names (glob syntax allowed)
 from gluon.tools import Auth, Service, PluginManager
 
-# host names must be a list of allowed host names (glob syntax allowed)
 auth = Auth(db, host_names=myconf.get('host.names'))
 service = Service()
 plugins = PluginManager()
@@ -89,7 +88,52 @@ plugins = PluginManager()
 # create all tables needed by auth if not custom tables
 # -------------------------------------------------------------------------
 auth.define_tables(username=False, signature=False)
+"""
+CLIENT_ID = '1108738092498964'
+CLIENT_SECRET = 'ebcd61ae719249bca4bc4f0becaf71e1'
+AUTH_URL='https://www.facebook.com/dialog/oauth'
+TOKEN_URL='https://graph.facebook.com/oauth/access_token'
+redirect_uri = 'http://localhost:8000/'
 
+#from facebook import GraphAPI, GraphAPIError
+from gluon.contrib.login_methods.oauth20_account import OAuthAccount
+
+try:
+    import json
+except ImportError:
+    from gluon.contrib import simplejson as json
+
+class FaceBookAccount(OAuthAccount):
+    AUTH_URL = "https://graph.facebook.com/oauth/authorize"
+    TOKEN_URL = "https://graph.facebook.com/oauth/access_token"
+
+    def __init__(self, g):
+        OAuthAccount.__init__(self, g,
+                              client_id=CLIENT_ID,
+                              client_secret=CLIENT_SECRET,
+                              auth_url=self.AUTH_URL,
+                              token_url=self.TOKEN_URL,
+                              scope='user_photos,friends_photos')
+        self.graph = None
+
+        def get_user(self):
+            if not self.accessToken():
+                return None
+            if not self.graph:
+                self.graph = GraphAPI((self.accessToken()))
+            try:
+                user = self.graph.get_object("me")
+                return dict(first_name=user['first_name'],
+                            last_name=user['last_name'],
+                            username=user['id'])
+            except GraphAPIError:
+                self.session.token = None
+                self.graph = None
+                return None
+
+
+auth.settings.login_form = FaceBookAccount(globals())
+"""
 # -------------------------------------------------------------------------
 # configure email
 # -------------------------------------------------------------------------
@@ -130,23 +174,27 @@ auth.settings.reset_password_requires_verification = True
 # auth.enable_record_versioning(db)
 
 db.define_table('image',
-    Field('archivo','upload',
-                label= T('')),
-    Field('title',
-        label=T('Descripción:')))
+                Field('archivo', 'upload',
+                      label=T('')),
+                Field('title',
+                      label=T('Descripción:')))
 
 db.define_table('comment',
-    Field ('image_id',db.image),
-    Field ('author', label=T('Autor')),
-    Field('body','text', label=T('Comentario')))
+                Field('image_id', db.image),
+                Field('author', label=T('Autor')),
+                Field('body', 'text', label=T('Comentario')))
 
-db.image.title.requires = [IS_NOT_EMPTY (error_message = T('Debe escribir una descripción de la imagen')), IS_LENGTH(35, error_message= T('Debe escribir un titulo que NO supere los 35 caracteres'))]
-db.image.archivo.requires = [IS_NOT_EMPTY (error_message = T('No ha cargado ninguna imagen!')), IS_IMAGE (error_message = T('El archivo cargado no es una imagen.')), IS_LENGTH(5048576, 1024, error_message= T('Debe ingresar una imagen que no supere 5 MB'))]
-db.comment.image_id.requires = IS_IN_DB(db,db.image.id,'%(title)s')
-db.comment.author.requires = IS_NOT_EMPTY(error_message = T('Ingrese su nombre, por favor.'))
-db.comment.body.requires = [IS_NOT_EMPTY(error_message = T('Agregue un comentario.')), IS_LENGTH(140, error_message= T('Debe escribir un comentario que no supere los 140 caracteres'))]
+db.image.title.requires = [IS_NOT_EMPTY(error_message=T('Debe escribir una descripción de la imagen')),
+                           IS_LENGTH(35, error_message=T('Debe escribir un titulo que NO supere los 35 caracteres'))]
+db.image.archivo.requires = [IS_NOT_EMPTY(error_message=T('No ha cargado ninguna imagen!')),
+                             IS_IMAGE(error_message=T('El archivo cargado no es una imagen.')),
+                             IS_LENGTH(5048576, 1024, error_message=T('Debe ingresar una imagen que no supere 5 MB'))]
+db.comment.image_id.requires = IS_IN_DB(db, db.image.id, '%(title)s')
+db.comment.author.requires = IS_NOT_EMPTY(error_message=T('Ingrese su nombre, por favor.'))
+db.comment.body.requires = [IS_NOT_EMPTY(error_message=T('Agregue un comentario.')), IS_LENGTH(140, error_message=T(
+    'Debe escribir un comentario que no supere los 140 caracteres'))]
 db.comment.image_id.writable = db.comment.image_id.readable = False
 
-#if not db(db.image).count():
- #   from gluon.contrib.populate import populate
-  #  populate (db.image, 6)
+# if not db(db.image).count():
+#   from gluon.contrib.populate import populate
+#  populate (db.image, 6)
