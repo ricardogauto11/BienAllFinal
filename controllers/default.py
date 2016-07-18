@@ -72,7 +72,7 @@ def nosotros():
 def galeria():
 	if len(request.args): page = int(request.args[0])
 	else: page = 0
-	ipp = 6
+	ipp = 8
 	limitby = (page*ipp, (page+1)*ipp+1)
 	galeria = db().select(db.image.ALL, orderby=~db.image.id, limitby=limitby)
 	return dict (galeria=galeria, page=page, ipp=ipp)

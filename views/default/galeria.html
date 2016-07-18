@@ -113,27 +113,27 @@
 								</div>
 						</div>
 						<br>
-								<div class="row">
-								{{for i, image in enumerate(galeria):}}
-										{{if i == ipp: break}}
-										<div class="col-sm-4 galeria-item">
-												<a href="{{=URL('default', 'mostrarFoto', args = image.id)}}">
-														<img src="{{=URL('default', 'download', args = image.archivo)}}" class="embed-responsive-item img-thumbnail" style="width:350px; height:280px">
-												</a>
-										</div>
-								{{pass}}
-							 </div>
-							 <nav>
-							 	<ul class="pager">
-							 	{{if page:}}
-							 	<li><a href="{{=URL(args=[page-1])}}"><span aria-hidden="true">&larr;</span> Anterior</a></li>
-							 	{{pass}}
+							<div class="row">
+							{{for i, image in enumerate(galeria):}}
+									{{if i == ipp: break}}
+									<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 galeria-item">
+											<a href="{{=URL('default', 'mostrarFoto', args = image.id)}}" class="thumbnail">
+													<img src="{{=URL('default', 'download', args = image.archivo)}}" class="img-responsive" style="width:300px; height:200px">
+											</a>
+									</div>
+							{{pass}}
+							</div>
+						 <nav>
+						 	<ul class="pager">
+						 	{{if page:}}
+						 	<li><a href="{{=URL(args=[page-1])}}"><span aria-hidden="true">&larr;</span> Anterior</a></li>
+						 	{{pass}}
 
-							 	{{if len(galeria) > ipp:}}
-							 	<li><a href="{{=URL(args=[page+1])}}">Proximo <span aria-hidden="true">&rarr;</span></a></li>
-							 	{{pass}}
-							 	</ul>
-							 </nav>
+						 	{{if len(galeria) > ipp:}}
+						 	<li><a href="{{=URL(args=[page+1])}}">Proximo <span aria-hidden="true">&rarr;</span></a></li>
+						 	{{pass}}
+						 	</ul>
+						 </nav>
 				 </div>
 		</section>
 					
