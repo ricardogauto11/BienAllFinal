@@ -104,6 +104,11 @@
         <![endif]-->
     <!-- Favicons -->
    {{include 'freelancer_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
+
+    <meta property="og:title" content="BienAll" />
+    <meta property="og:description" content="Compartí tu experiencia con el arte" />
+    <meta property="og:image" content="http://159.203.5.192/BienAll/static/img/profile.png" />      
+    <meta property="og:url" content="https://empleoenchaco.com.ar/informatorio/bienall" />
       
 </head>
 
@@ -174,7 +179,7 @@
                             <ul class="list-inline2 visible-lg visible-md visible-sm">
                                 <li>Compartí</li>
                                 <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://empleoenchaco.com.ar/informatorio/bienall{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://empleoenchaco.com.ar/informatorio{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -194,7 +199,7 @@
                                 </li>
                                 <li>
 
-                                   <a href="http://twitter.com/home?status=Mira%20la%20foto%20que%20saque%20en%20la%20Bienal%20https://empleoenchaco.com.ar/informatorio/bienall{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                   <a href="http://twitter.com/home?status=Mira%20la%20foto%20que%20saque%20en%20la%20Bienal%20https://empleoenchaco.com.ar/informatorio{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
                                 <script>
                                   $('.popup4').click(function(event) {
                                     var width  = 400,
