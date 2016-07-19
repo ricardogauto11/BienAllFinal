@@ -116,9 +116,9 @@
 								<div class="row">
 								{{for i, image in enumerate(galeria):}}
 										{{if i == ipp: break}}
-										<div class="col-sm-4 galeria-item">
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 galeria-item">
 												<a href="{{=URL('default', 'mostrarFoto', args = image.id)}}">
-														<img src="{{=URL('default', 'download', args = image.archivo)}}" class="embed-responsive-item img-thumbnail" style="width:350px; height:280px">
+														<img src="{{=URL('default', 'download', args = image.archivo)}}" class="embed-responsive-item img-thumbnail" style="width:350px; height:200px">
 												</a>
 										</div>
 								{{pass}}
