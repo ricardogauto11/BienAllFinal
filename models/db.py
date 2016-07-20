@@ -88,7 +88,7 @@ plugins = PluginManager()
 # create all tables needed by auth if not custom tables
 # -------------------------------------------------------------------------
 auth.define_tables(username=False, signature=False)
-
+"""
 CLIENT_ID = '1108738092498964'
 CLIENT_SECRET = 'ebcd61ae719249bca4bc4f0becaf71e1'
 AUTH_URL='https://www.facebook.com/dialog/oauth'
@@ -133,7 +133,7 @@ class FaceBookAccount(OAuthAccount):
 
 
 auth.settings.login_form = FaceBookAccount(globals())
-
+"""
 # -------------------------------------------------------------------------
 # configure email
 # -------------------------------------------------------------------------

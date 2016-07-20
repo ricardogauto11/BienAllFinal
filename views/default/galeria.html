@@ -109,16 +109,16 @@
 								<div class="col-lg-12 text-center">
 										<h2 class="colorcito">Galería</h2>
 										<hr class="star-light">
-										<span class="skills colorcito">Mirá las fotos subidas por otros usuarios</span>
+										<span class="skills colorcito">Mirá las fotos subidas por otros usuarios y si te gusta una seleccionala para darle 'me gusta', compartirla a redes sociales y/o dejar un comentario.</span> 
 								</div>
 						</div>
 						<br>
 								<div class="row">
 								{{for i, image in enumerate(galeria):}}
 										{{if i == ipp: break}}
-										<div class="col-sm-4 galeria-item">
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 galeria-item">
 												<a href="{{=URL('default', 'mostrarFoto', args = image.id)}}">
-														<img src="{{=URL('default', 'download', args = image.archivo)}}" class="embed-responsive-item img-thumbnail" style="width:350px; height:280px">
+														<img src="{{=URL('default', 'download', args = image.archivo)}}" class="embed-responsive-item img-thumbnail" style="width:350px; height:200px">
 												</a>
 										</div>
 								{{pass}}
@@ -150,7 +150,7 @@
 												<h4>Compartí BienAll con tus amigos</h4>
 												<ul class="list-inline">
 														<li>
-																 <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+																 <a href="http://www.facebook.com/sharer.php?u=https://empleoenchaco.com.ar/informatorio/bienall" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
 																<script>
 																	$('.popup').click(function(event) {
 																		var width  = 400,
@@ -169,7 +169,7 @@
 																</script>
 														</li>
 														<li>
-															 <a href="https://plus.google.com/share?url=http://127.0.0.1:8000/BienAllFinal/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+															 <a href="https://plus.google.com/share?url=https://empleoenchaco.com.ar/informatorio/bienall" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
 																<script>
 																	$('.popup2').click(function(event) {
 																		var width  = 400,
@@ -188,7 +188,7 @@
 																</script>
 														</li>
 														<li>
-																<a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://localhost/BienAllFinal/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+																<a href="http://twitter.com/home?status=Visita%20esta%20pagina%20https://empleoenchaco.com.ar/informatorio/bienall" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
 																<script>
 																	$('.popup3').click(function(event) {
 																		var width  = 400,
@@ -208,7 +208,7 @@
 														</li>
 														<li>
 														<div class="visible-xs">
-																<a href="whatsapp://send?text=http://192.168.10.97:8000/BienAllFinal/default/index" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
+																<a href="whatsapp://send?text=hhttps://empleoenchaco.com.ar/informatorio/bienall" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
 														</div>
 														</li>
 												</ul>

@@ -22,11 +22,27 @@
     <!-- include stylesheets -->
     <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{=URL('static','css/freelancer-bootstrap3.css')}}"/>
+      <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontAwesome.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.eot.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.css" rel="stylesheet" type="text/css">
+    <link href="../static/font-awesome/css/fontawesome-webfont.woff.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{=URL('static','js/main.js')}}"></script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="shortcut icon" href="../static/img/pestana.ico" />
       
         {{
       
@@ -48,7 +64,6 @@
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -74,14 +89,14 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('galleryController', 'index')}}">Galeria</a>
+                        <a href="{{=URL('default', 'galeria')}}">Galería</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{=URL('default', 'dejaTuHuella')}}">Deja Tu Huella</a>
+                        <a href="{{=URL('default', 'dejaTuHuella')}}">Dejá Tu Huella</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Log In</a>
-
+                    <!--<li class="page-scroll">
+                        <a href="#" id="login" class="btn-primary">Iniciar sesión  <i class="fa fa-facebook" aria-hidden="true"></i></a>  
+                    </li> -->   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -94,66 +109,32 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <br>
-                    <h2 class="colorcito">Mas apps</h2>
-                    <hr class="star-primary">
-                    <span class="skills colorcito">Si querés vivir mas experiencias con el arte de nuestro Chaco <br> visitá estas aplicaciones</span>
+                    <h2 class="colorcito">Apps relacionadas</h2>
+                    <hr class="star-light">
+                    <span class="skills colorcito">Si querés vivir mas experiencias con el arte de nuestro Chaco <br> visitá estas aplicaciones amigas</span>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-sm-4 galeria-item">
-                    <a href="#galeriaModal1" class="galeria-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <a href="#"><img src="../static/img/portfolio/escultor.png" class="img-responsive" alt=""></a>
-                    </a>
+                    <a href="https://empleoenchaco.com.ar/informatorio/esqltor"><img src="../static/img/portfolio/escultor.png" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 galeria-item">
-                    <a href="#galeriaModal2" class="galeria-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <a href="#"><img src="../static/img/portfolio/chuwal.png" class="img-responsive" alt=""></a>
-                    </a>
+                    <a href="https://empleoenchaco.com.ar/informatorio/chuwal"><img src="../static/img/portfolio/chuwal.png" class="img-responsive" alt=""></a> 
+
                 </div>
                 <div class="col-sm-4 galeria-item">
-                    <a href="#galeriaModal3" class="galeria-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <a href="#"><img src="../static/img/portfolio/brainchaco.png" class="img-responsive" alt=""></a>
-                    </a>
+                    <a href="https://empleoenchaco.com.ar/informatorio/brainChaco"><img src="../static/img/portfolio/brainchaco.png" class="img-responsive" alt=""></a>
                 </div>
             </div>  
             <div class="row">
                 <div class="col-sm-2 galeria item">
                 </div>
                 <div class="col-sm-4 galeria-item">
-                    <a href="#galeriaModal4" class="galeria-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <a href="#"><img src="../static/img/portfolio/informarq.png" class="img-responsive" alt=""></a>
-                    </a>
+                    <a href="https://empleoenchaco.com.ar/informatorio/informarq"><img src="../static/img/portfolio/informarq.png" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-4 galeria-item">
-                    <a href="#galeriaModal5" class="galeria-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <a href="#"><img src="../static/img/portfolio/guiartec.png" class="img-responsive" alt=""></a>
-                    </a>
+                    <a href="https://empleoenchaco.com.ar/informatorio/guiArtec"><img src="../static/img/portfolio/guiartec.png" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-sm-2 galeria item">
                 </div>
@@ -166,31 +147,79 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h4><a class="ex1 colorcito2" href="#">Mas apps</a></h4>
+                        <h4><a href="#">Apps relacionadas</a></h4>
                         <!--<p>Frondizi 4 piso 174<br>Resistencia chacop</p>-->
                     </div>
                     <div class="footer-col col-md-4">
-                        <h4>Comparti BienAll con tus amigos</h4>
+                        <h4>Compartí BienAll con tus amigos</h4>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.facebook.com/sharer.php?u=http://google.com" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+
+                                <script>
+                                  $('.popup').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'facebook', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https://scontent.fgig1-3.fna.fbcdn.net/v/t1.0-9/13432334_10206995053650261_2717983411820813275_n.jpg?oh=15b8cc645b1e0fa534ba00ce35292d60&oe=580605A8" class="btn-social btn-outline" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/share?url=http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup2 btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <script>
+                                  $('.popup2').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'google', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                                <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="http://twitter.com/home?status=Visita%20esta%20pagina%20http://informatorio.pythonanywhere.com/BienAll/default/index" class="popup3 btn-social btn-outline"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                <script>
+                                  $('.popup3').click(function(event) {
+                                    var width  = 400,
+                                        height = 400,
+                                        left   = ($(window).width()  - width)  / 2,
+                                        top    = ($(window).height() - height) / 2,
+                                        url    = this.href,
+                                        opts   = 'status=1' +
+                                                 ',width='  + width  +
+                                                 ',height=' + height +
+                                                 ',top='    + top    +
+                                                 ',left='   + left;
+                                    window.open(url, 'twitter', opts);
+                                    return false;
+                                  });
+                                </script>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            <div class="visible-xs">
+                                <a href="whatsapp://send?text=http://informatorio.pythonanywhere.com/BienAll/default/index" data-action="share/whatsapp/share" class="btn-social btn-outline"><i class="fa fa-whatsapp"></i></a>
+                            </div>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h4><a class="ex1 colorcito2" href="{{=URL('default', 'nosotros')}}">Nosotros</a></h4>
+                        <h4><a href="{{=URL('default', 'nosotros')}}">Nosotros</a></h4>
                         <!--<p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>-->
                     </div>
                 </div>
@@ -200,7 +229,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Chaco - 2016
+                    Creado por <a href="https://fb.com/qbits.ar/" target=_blank>Qbits</a>
                     </div>
                 </div>
             </div>
@@ -233,6 +262,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 </body>
 </html>
