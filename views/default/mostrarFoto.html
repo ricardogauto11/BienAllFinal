@@ -223,12 +223,14 @@
                     {{if len(comments):}}
                      <div class="zurdita azul"><h3>Comentarios:</h3><br></div>
                         {{for comment in comments:}}
-                            <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div><br>
+                            <div class="megusta zurdita"><b>{{=comment.author}}:</b> {{=comment.body}}</div><br>
                         {{pass}}
                     {{else:}}
-                        <div class="zurdita negro"><h3>Todavía no hay comentarios</h3></div><br>
+                        <div class="comentar negro visible-lg visible-md"><h3>Todavía no hay comentarios</h3></div><br>
+                        <div class="zurdita negro visible-sm visible-xs"><h3>Todavía no hay comentarios</h3></div><br>
                     {{pass}}
-                        <div class="zurdita azul"><h4>Escribe un comentario</h4></div>
+                        <div class="comentar2 azul visible-lg visible-md"><h4>Dejá un comentario</h4></div>
+                        <div class="zurdita azul visible-sm visible-xs"><h4>Dejá un comentario</h4></div>
                         <br>
                     <div class="zurdita azul">{{=form}}</div>
                     <!--<div class="fb-comments" data-href="http://localhost:8000{{=URL('default', 'mostrarFoto', args=image.id)}}" data-width="400" data-numposts="5"></div>-->

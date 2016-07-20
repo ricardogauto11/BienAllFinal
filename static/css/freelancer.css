@@ -533,6 +533,9 @@ a.ex1:hover, a.ex1:active {
 
 .comentar{
     font-size: 20px;
+    padding-right: 0;
+    list-style: none;
+    margin-right: 400px;
 }
 
 .negro{
@@ -631,4 +634,11 @@ ul.social-buttons li a:active {
 }
 #logout {
     margin-top: 10px;  
+}
+
+.comentar2{
+    font-size: 20px;
+    padding-right: 0;
+    list-style: none;
+    margin-left: -530px;
 }
