@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{=URL('static','css/style.min.css')}}"/>
     <link rel="stylesheet" href="{{=URL('static','css/freelancer-bootstrap3.css')}}"/>
+    <link rel="stylesheet" href="{{=URL('static','css/style.min.css')}}"/>
       <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 
@@ -104,6 +105,11 @@
         <![endif]-->
     <!-- Favicons -->
    {{include 'freelancer_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
+
+    <meta property="og:title" content="BienAll" />
+    <meta property="og:description" content="Compartí tu experiencia con el arte" />
+    <meta property="og:image" content="http://159.203.5.192/BienAll/static/img/profile.png" />      
+    <meta property="og:url" content="https://empleoenchaco.com.ar/informatorio/bienall" />
       
 </head>
 
@@ -174,7 +180,7 @@
                             <ul class="list-inline2 visible-lg visible-md visible-sm">
                                 <li>Compartí</li>
                                 <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://empleoenchaco.com.ar/informatorio/bienall{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://empleoenchaco.com.ar/informatorio{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <script>
                                   $('.popup').click(function(event) {
                                     var width  = 400,
@@ -194,7 +200,7 @@
                                 </li>
                                 <li>
 
-                                   <a href="http://twitter.com/home?status=Mira%20la%20foto%20que%20saque%20en%20la%20Bienal%20https://empleoenchaco.com.ar/informatorio/bienall{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
+                                   <a href="http://twitter.com/home?status=Mira%20la%20foto%20que%20saque%20en%20la%20Bienal%20https://empleoenchaco.com.ar/informatorio{{=URL('default', 'mostrarFoto', args = image.id)}}" class="popup4 btn-social2 btn-outline2"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a> 
                                 <script>
                                   $('.popup4').click(function(event) {
                                     var width  = 400,
@@ -222,12 +228,14 @@
                     {{if len(comments):}}
                      <div class="zurdita azul"><h3>Comentarios:</h3><br></div>
                         {{for comment in comments:}}
-                            <div class="megusta zurdita comentar"><b>{{=comment.author}}:</b> {{=comment.body}}</div><br>
+                            <div class="megusta zurdita"><b>{{=comment.author}}:</b> {{=comment.body}}</div><br>
                         {{pass}}
                     {{else:}}
-                        <div class="zurdita negro"><h3>Todavía no hay comentarios</h3></div><br>
+                        <div class="comentar negro visible-lg visible-md"><h3>Todavía no hay comentarios</h3></div><br>
+                        <div class="zurdita negro visible-sm visible-xs"><h3>Todavía no hay comentarios</h3></div><br>
                     {{pass}}
-                        <div class="zurdita azul"><h4>Escribe un comentario</h4></div>
+                        <div class="comentar2 azul visible-lg visible-md"><h4>Dejá un comentario</h4></div>
+                        <div class="zurdita azul visible-sm visible-xs"><h4>Dejá un comentario</h4></div>
                         <br>
                     <div class="zurdita azul">{{=form}}</div>
                     <!--<div class="fb-comments" data-href="http://localhost:8000{{=URL('default', 'mostrarFoto', args=image.id)}}" data-width="400" data-numposts="5"></div>-->
